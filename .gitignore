@@ -4,3 +4,7 @@ NetworkSimulatorProject/.classpath
 NetworkSimulatorProject/.project
 
 *.prefs
+
+NetworkSimulatorProject/NetworkSimulatorCore/.classpath
+
+NetworkSimulatorProject/NetworkSimulatorCore/.project
