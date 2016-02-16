@@ -27,8 +27,9 @@ public class AppLayerRequestDispatcher extends AbstractLayerRequestDispatcher{
 		AppLayerResponse response = new AppLayerResponse();
 		response.setStatus(AppLayerResponse.STATUS.INVALID_REQUEST);
 		if(request.getPrimitive() == AppLayerRequest.PRIMITIVE.REQUEST_APP_NODE){
-			response = requestAppNode();
-			responseContent = ObjectSerializer.serialize(response);
+			LayerTcpConnection tcpConnection = node.openTcpConnection();
+			AppLayerTcpNodeHandler handler = new AppLayerTcpNodeHandler(tcpConnection.getHost(),tcpConnection.getPort(),tcpConnection.getActiveCount());
+			responseContent = ObjectSerializer.serialize(handler);
 		}else if(request.getPrimitive() == AppLayerRequest.PRIMITIVE.DISCOVER){
 			AppLayerNodeHandler handler = new AppLayerNodeHandler(node.getHost(),node.getPort(),node.getActiveCount());
 			responseContent = ObjectSerializer.serialize(handler);
@@ -42,16 +43,5 @@ public class AppLayerRequestDispatcher extends AbstractLayerRequestDispatcher{
 		socket.close();
 		node.releasePort(port);
 	}
-	
-	private AppLayerResponse requestAppNode() throws Exception{
-		AppLayerResponse response = new AppLayerResponse();
-		response.setStatus(AppLayerResponse.STATUS.SUCCESS);
-		LayerTcpConnection conn = node.openTcpConnection();
-		return response;
-	}
-
-	
-
-
 
 }

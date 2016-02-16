@@ -28,10 +28,10 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 	class LayerTcpComparator implements Comparator<LayerTcpConnection>{
 
 		public int compare(LayerTcpConnection o1, LayerTcpConnection o2) {
-			if(o1.activeCount()<o2.activeCount()){
+			if(o1.getActiveCount()<o2.getActiveCount()){
 				return -1;
 			}
-			if(o1.activeCount()>o2.activeCount()){
+			if(o1.getActiveCount()>o2.getActiveCount()){
 				return 1;
 			}
 			return 0;
@@ -132,7 +132,7 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		}
 		return openedPorts;
 	}
-	public LayerTcpConnection getAvailableTcpConnection() {
+	public synchronized LayerTcpConnection getAvailableTcpConnection() {
 		List<LayerTcpConnection> connections = TCP_CONN_MAP.get(tcpConnectionClass);
 		if(connections==null){
 			connections = new ArrayList<LayerTcpConnection>();			
@@ -146,7 +146,7 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		return connections.get(0);
 	}
 	
-	public LayerTcpConnection openTcpConnection() throws Exception {
+	public synchronized LayerTcpConnection openTcpConnection() throws Exception {
 		LayerTcpConnection conn = getAvailableTcpConnection();
 		
 		if(conn == null){
@@ -155,6 +155,7 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 				throw new Exception("Not available port");
 			}
 			conn = tcpConnectionClass.getConstructor(int.class).newInstance(port);
+			requestExecutor.execute(conn);
 			TCP_CONN_MAP.get(tcpConnectionClass).add(conn);
 		}
 		return conn;
