@@ -11,6 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.uag.netsim.core.layer.LayerNode;
+import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 
 @ContextConfiguration(locations = { "classpath:META-INF/spring/spring-ctx.xml" })
 public class AppLayerNodeTest extends AbstractTestNGSpringContextTests{
@@ -32,6 +33,7 @@ public class AppLayerNodeTest extends AbstractTestNGSpringContextTests{
 		requestExecutor.execute(appLayer);
 		while(!appLayer.isReady());
 		AppLayerClient client = new AppLayerClient();
+		LayerTcpConnectionHandler tcpHandler = client.requestTcpNode();
 		assert appLayer.isReady();
 	}
 	

@@ -1,12 +1,23 @@
 package org.uag.netsim.core.layer.app;
 
 import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
+import org.uag.netsim.core.layer.LayerResponse;
 
-public class AppLayerTcpRequestDispatcher extends AbstractLayerTcpRequestDispatcher{
+import java.io.IOException;
+import java.net.Socket;
 
-	public void run() {
-		// TODO Auto-generated method stub
-		
-	}
+public class AppLayerTcpRequestDispatcher
+        extends AbstractLayerTcpRequestDispatcher<AppLayerTcpRequest,AppLayerTcpResponse>{
 
+
+    public AppLayerTcpRequestDispatcher(Socket socket) throws IOException {
+        super(socket);
+    }
+
+    @Override
+    protected AppLayerTcpResponse resolveRequest(AppLayerTcpRequest request){
+        AppLayerTcpResponse response = new AppLayerTcpResponse();
+        response.setStatus(AppLayerTcpResponse.STATUS.INVALID_REQUEST);
+        return response;
+    }
 }

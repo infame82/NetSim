@@ -72,15 +72,15 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		requestExecutor.shutdownNow();
 		releasePort(socket.getLocalPort());
 	}
-	public boolean isReady() {
+	public synchronized boolean isReady() {
 		return ready;
 	}
 
-	public boolean isBusy() {
+	public synchronized boolean isBusy() {
 		return requestExecutor.getActiveCount()>=10;
 	}
 	
-	public int getActiveCount(){
+	public synchronized int getActiveCount(){
 		return requestExecutor.getActiveCount();
 	}
 	
@@ -102,12 +102,10 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 				requestExecutor.execute(dispatcher);
 			}
 		}catch(Exception e){
-		}finally{
-			release();
 		}
 	}
 	
-	public int getAvailablePort(){
+	public synchronized int getAvailablePort(){
 		int port = minPortRange;
 		List<Integer> openedPorts = getOpenedPorts();
 		while( port<= maxPortRange){
@@ -120,7 +118,7 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		return -1;
 	}
 	
-	public void releasePort(int port){
+	public synchronized void releasePort(int port){
 		getOpenedPorts().remove((Integer)port);
 	}
 	
@@ -161,12 +159,16 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		return conn;
 	}
 
-	public int getPort(){
+	public synchronized int getPort(){
 		return socket.getLocalPort();
 	}
 	
-	public InetAddress getHost(){
-		return socket.getLocalAddress();
+	public synchronized InetAddress getHost(){
+		try {
+			return InetAddress.getLocalHost();
+		}catch(Exception e){
+			return socket.getInetAddress();
+		}
 	}
 	
 }

@@ -2,7 +2,7 @@ package org.uag.netsim.core.layer;
 
 import java.net.InetAddress;
 
-public abstract class AbstractLayerNodeHandler implements LayerNodeHandler{
+public class DefaultLayerNodeHandler implements LayerNodeHandler{
 
 	/**
 	 * 
@@ -12,7 +12,7 @@ public abstract class AbstractLayerNodeHandler implements LayerNodeHandler{
 	private InetAddress host;
 	private int noise;
 	
-	public AbstractLayerNodeHandler(InetAddress host,int port,int noise){
+	public DefaultLayerNodeHandler(InetAddress host, int port, int noise){
 		this.host = host;
 		this.port = port;
 		this.noise = noise;

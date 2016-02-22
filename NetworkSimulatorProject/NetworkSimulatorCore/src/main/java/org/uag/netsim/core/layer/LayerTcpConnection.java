@@ -3,6 +3,8 @@ package org.uag.netsim.core.layer;
 import java.net.InetAddress;
 
 public interface LayerTcpConnection extends Runnable{
+
+	static int MSG_LENGHT = 512;
 	
 	int getPort();
 	
@@ -11,4 +13,6 @@ public interface LayerTcpConnection extends Runnable{
 	boolean isBusy();
 	
 	int getActiveCount();
+
+	void release();
 }

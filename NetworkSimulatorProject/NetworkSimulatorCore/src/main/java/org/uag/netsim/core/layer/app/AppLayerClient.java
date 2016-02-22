@@ -26,7 +26,7 @@ public class AppLayerClient extends AbstractLayerClient{
 	@Override
 	public byte[] getTcpNodeRequest() throws IOException {
 		AppLayerRequest request = new AppLayerRequest();
-		request.setPrimitive(AppLayerRequest.PRIMITIVE.REQUEST_APP_NODE);
+		request.setPrimitive(AppLayerRequest.PRIMITIVE.REQUEST_NODE);
 		byte[] data = ObjectSerializer.serialize(request);
 		return data;
 	}

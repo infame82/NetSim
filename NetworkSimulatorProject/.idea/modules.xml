@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/NetworkSimulatorCore.iml" filepath="$PROJECT_DIR$/NetworkSimulatorCore.iml" group="NetworkSimulatorProject and modules" />
+      <module fileurl="file://$PROJECT_DIR$/NetworkSimulatorCore (1).iml" filepath="$PROJECT_DIR$/NetworkSimulatorCore (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetworkSimulatorProject.iml" filepath="$PROJECT_DIR$/NetworkSimulatorProject.iml" group="NetworkSimulatorProject and modules" />
+      <module fileurl="file://$PROJECT_DIR$/NetworkSimulatorProject (1).iml" filepath="$PROJECT_DIR$/NetworkSimulatorProject (1).iml" />
+    </modules>
+  </component>
+</project>

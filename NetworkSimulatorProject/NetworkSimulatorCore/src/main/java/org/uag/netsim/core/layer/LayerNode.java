@@ -4,7 +4,7 @@ import java.net.InetAddress;
 
 public interface LayerNode extends Runnable{
 	
-	static int MSG_LENGHT = 256;
+	static int MSG_LENGHT = 512;
 
 	boolean isReady();
 	

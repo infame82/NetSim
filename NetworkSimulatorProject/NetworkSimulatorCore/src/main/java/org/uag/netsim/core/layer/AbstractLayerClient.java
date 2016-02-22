@@ -89,26 +89,26 @@ public abstract class AbstractLayerClient implements LayerClient{
 		
 	}
 	
-	public LayerTcpNodeHandler requestTcpNode() throws Exception{
+	public LayerTcpConnectionHandler requestTcpNode() throws Exception{
 		if(HANDLERS.isEmpty()){
 			discoverNodes();
 		}
 		if(HANDLERS.isEmpty()){
 			throw new Exception("Not available Nodes");
 		}
-		LayerTcpNodeHandler tcpHandler = null;
+		LayerTcpConnectionHandler tcpHandler = null;
 		Collections.sort(HANDLERS, layerHandlerComparator);
 		LayerNodeHandler handler = HANDLERS.get(0);
 		DatagramSocket socket = null;
 		try {
 			byte[] buffer = new byte[512];
 			DatagramPacket rpacket = new DatagramPacket(buffer, buffer.length);
-			socket = new DatagramSocket(handler.getPort(),handler.getHost());
+			socket = new DatagramSocket();//handler.getPort(),handler.getHost());
 			byte[] data = getTcpNodeRequest();
 			DatagramPacket packet = new DatagramPacket(data, data.length, handler.getHost(),handler.getPort());
 			socket.send(packet);
 			socket.receive(rpacket);
-			tcpHandler = (LayerTcpNodeHandler)ObjectSerializer.unserialize(rpacket.getData());
+			tcpHandler = (LayerTcpConnectionHandler)ObjectSerializer.unserialize(rpacket.getData());
 		}catch(SocketTimeoutException sto){
 			
 		}catch(Exception e){

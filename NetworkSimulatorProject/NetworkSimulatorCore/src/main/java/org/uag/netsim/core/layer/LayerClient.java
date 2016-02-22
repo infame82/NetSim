@@ -4,5 +4,5 @@ public interface LayerClient {
 
 	void discoverNodes() throws Exception;
 	
-	LayerTcpNodeHandler requestTcpNode() throws Exception;
+	LayerTcpConnectionHandler requestTcpNode() throws Exception;
 }
