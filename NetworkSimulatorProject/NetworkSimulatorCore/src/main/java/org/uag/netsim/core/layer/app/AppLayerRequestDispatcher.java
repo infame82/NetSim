@@ -12,7 +12,7 @@ public class AppLayerRequestDispatcher extends AbstractLayerRequestDispatcher<Ap
 	}
 
 	protected Object resolveRequest(AppLayerRequest request) throws Exception{
-		byte[] responseContent = null;
+		//byte[] responseContent = null;
 		AppLayerResponse response = new AppLayerResponse();
 		response.setStatus(AppLayerResponse.STATUS.INVALID_REQUEST);
 		if(request.getPrimitive() == AppLayerRequest.PRIMITIVE.REQUEST_NODE){

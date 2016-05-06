@@ -12,10 +12,14 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import org.uag.netsim.core.DefaultCoreLog;
+import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.layer.app.AppLayerNode;
 
 public abstract class AbstractLayerClient implements LayerClient{
+	
+	public ICoreLog log;
 	
 	public static final List<LayerNodeHandler> HANDLERS = new ArrayList<LayerNodeHandler>();
 	
@@ -73,12 +77,22 @@ public abstract class AbstractLayerClient implements LayerClient{
 	private LayerNodeHandlerComparator layerHandlerComparator;
 	
 	public AbstractLayerClient() throws Exception{
+		this(new DefaultCoreLog());
+	}
+	
+	public AbstractLayerClient(ICoreLog log) throws Exception{
+		this.log = log;
+		if(log==null){
+			this.log = new DefaultCoreLog();
+		}
+		enableLog(true);
 		discoverNodes();
 		layerHandlerComparator = new LayerNodeHandlerComparator();
 	}
 	
 	public void discoverNodes() throws Exception {
 		HANDLERS.clear();
+		log.sendDebug("Discovering Peers ["+this.getClass()+"]");
 		ThreadPoolExecutor requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(100);
 		for(int i=AppLayerNode.MIN_PORT_RANGE;i<=AppLayerNode.MAX_PORT_RANGE;i++){
@@ -123,6 +137,9 @@ public abstract class AbstractLayerClient implements LayerClient{
 		
 	}
 
+	public void enableLog(boolean enable){
+		log.setEnableLog(enable);
+	}
 	public abstract byte[] getDiscoverRequest() throws IOException;
 	public abstract byte[] getTcpNodeRequest() throws IOException;
 

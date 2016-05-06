@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.layer.AbstractLayerClient;
 
@@ -14,6 +15,9 @@ public class AppLayerClient extends AbstractLayerClient{
 	
 	public AppLayerClient() throws Exception {
 		super();
+	}
+	public AppLayerClient(ICoreLog log) throws Exception {
+		super(log);
 	}
 	
 	public byte[] getDiscoverRequest() throws IOException{

@@ -7,7 +7,13 @@ import org.uag.netsim.core.layer.LayerTcpRequest;
  */
 public class AppLayerTcpRequest implements LayerTcpRequest<AppLayerTcpRequest.PRIMITIVE> {
 
-    public enum PRIMITIVE{OP_1}
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4693288834840993424L;
+
+
+	public enum PRIMITIVE{OP_1}
 
     private PRIMITIVE primitive;
 

@@ -7,4 +7,9 @@ import org.uag.netsim.core.layer.AbstractLayerTcpResponse;
  */
 public class AppLayerTcpResponse extends AbstractLayerTcpResponse {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6535681161326222467L;
+
 }

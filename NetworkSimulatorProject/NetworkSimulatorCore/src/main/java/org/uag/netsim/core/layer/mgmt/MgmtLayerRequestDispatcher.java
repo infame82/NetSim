@@ -1,9 +1,12 @@
 package org.uag.netsim.core.layer.mgmt;
 
-import org.uag.netsim.core.ObjectSerializer;
-import org.uag.netsim.core.layer.*;
-
 import java.net.DatagramPacket;
+
+import org.uag.netsim.core.layer.AbstractLayerRequestDispatcher;
+import org.uag.netsim.core.layer.DefaultLayerNodeHandler;
+import org.uag.netsim.core.layer.DefaultLayerTcpConnectionHandler;
+import org.uag.netsim.core.layer.LayerNode;
+import org.uag.netsim.core.layer.LayerTcpConnection;
 
 /**
  * Created by david on 21/02/16.
@@ -16,7 +19,7 @@ public class MgmtLayerRequestDispatcher extends AbstractLayerRequestDispatcher<M
 
 
     protected Object resolveRequest(MgmtLayerRequest request) throws Exception{
-        byte[] responseContent = null;
+        //byte[] responseContent = null;
         MgmtLayerResponse response = new MgmtLayerResponse();
         response.setStatus(MgmtLayerResponse.STATUS.INVALID_REQUEST);
         if(request.getPrimitive() == MgmtLayerRequest.PRIMITIVE.REQUEST_NODE){

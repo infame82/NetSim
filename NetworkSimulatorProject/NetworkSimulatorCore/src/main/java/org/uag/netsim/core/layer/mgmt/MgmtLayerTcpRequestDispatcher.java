@@ -1,9 +1,9 @@
 package org.uag.netsim.core.layer.mgmt;
 
-import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
-
 import java.io.IOException;
 import java.net.Socket;
+
+import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
 
 /**
  * Created by david on 21/02/16.

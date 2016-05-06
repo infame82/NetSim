@@ -5,10 +5,14 @@ package org.uag.netsim.core.layer;
  */
 public abstract class AbstractLayerResponse implements  LayerResponse {
 
-    private STATUS status;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7245226051276560931L;
+	private STATUS status;
     private String data;
 
-    @Override
+
     public STATUS getStatus() {
         return status;
     }
@@ -17,7 +21,7 @@ public abstract class AbstractLayerResponse implements  LayerResponse {
         this.status = status;
     }
 
-    @Override
+ 
     public String getData() {
         return data;
     }

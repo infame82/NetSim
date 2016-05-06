@@ -1,10 +1,8 @@
 package org.uag.netsim.core.layer.mgmt;
 
-import org.uag.netsim.core.layer.AbstractLayerNode;
-import org.uag.netsim.core.layer.app.AppLayerRequestDispatcher;
-import org.uag.netsim.core.layer.app.AppLayerTcpConnection;
-
 import javax.annotation.PostConstruct;
+
+import org.uag.netsim.core.layer.AbstractLayerNode;
 
 /**
  * Created by david on 21/02/16.

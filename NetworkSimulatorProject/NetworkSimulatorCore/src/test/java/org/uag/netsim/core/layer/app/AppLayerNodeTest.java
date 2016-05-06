@@ -10,6 +10,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.uag.netsim.core.DefaultCoreLog;
 import org.uag.netsim.core.layer.LayerNode;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 
@@ -32,7 +33,7 @@ public class AppLayerNodeTest extends AbstractTestNGSpringContextTests{
 	public void test() throws Exception{
 		requestExecutor.execute(appLayer);
 		while(!appLayer.isReady());
-		AppLayerClient client = new AppLayerClient();
+		AppLayerClient client = new AppLayerClient(new DefaultCoreLog());		
 		LayerTcpConnectionHandler tcpHandler = client.requestTcpNode();
 		assert appLayer.isReady();
 	}
