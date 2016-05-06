@@ -2,11 +2,15 @@ package org.uag.netsim.core.layer.mgmt;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 
 /**
  * Created by david on 21/02/16.
  */
+@Component("mgmtLayerNode")
+@Scope("prototype")
 public class MgmtLayerNode extends AbstractLayerNode<MgmtLayerRequestDispatcher,MgmtLayerTcpConnection> {
 
     public MgmtLayerNode() {

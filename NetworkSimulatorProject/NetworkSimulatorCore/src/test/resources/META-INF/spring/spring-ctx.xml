@@ -9,6 +9,6 @@
 	">
 
     <context:annotation-config />
-	<context:component-scan base-package="org.uag.netsim.core.layer.app" />
+	<context:component-scan base-package="org.uag.netsim.core.layer.app, org.uag.netsim.core.layer.mgmt" />
 
 </beans>

@@ -1,4 +1,4 @@
-package org.uag.netsim.core.layer.app;
+package org.uag.netsim.core.layer.mgmt;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -15,15 +15,15 @@ import org.uag.netsim.core.layer.LayerNode;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 
 @ContextConfiguration(locations = { "classpath:META-INF/spring/spring-ctx.xml" })
-public class AppLayerNodeTest extends AbstractTestNGSpringContextTests{
+public class MgmtLayerNodeTest extends AbstractTestNGSpringContextTests{
 
 	@Autowired
-	@Qualifier("appLayerNode")
-	private LayerNode appLayer_01;
+	@Qualifier("mgmtLayerNode")
+	private LayerNode node_01;
 	
 	@Autowired
-	@Qualifier("appLayerNode")
-	private LayerNode appLayer_02;
+	@Qualifier("mgmtLayerNode")
+	private LayerNode node_02;
 	
 	private ThreadPoolExecutor requestExecutor;
 	
@@ -35,18 +35,18 @@ public class AppLayerNodeTest extends AbstractTestNGSpringContextTests{
 	
 	@Test
 	public void test() throws Exception{
-		requestExecutor.execute(appLayer_01);
-		requestExecutor.execute(appLayer_02);
-		while(!appLayer_01.isReady());
-		while(!appLayer_02.isReady());
-		AppLayerClient client = new AppLayerClient(new DefaultCoreLog());		
+		requestExecutor.execute(node_01);
+		requestExecutor.execute(node_02);
+		while(!node_01.isReady());
+		while(!node_02.isReady());
+		MgmtLayerClient client = new MgmtLayerClient(new DefaultCoreLog());		
 		LayerTcpConnectionHandler tcpHandler = client.requestTcpNode();
-		assert appLayer_01.isReady() && appLayer_02.isReady();
+		assert node_01.isReady() && node_02.isReady();
 	}
 	
 	@AfterTest
 	public void destroyTest(){
-		appLayer_01.release();
-		appLayer_02.release();
+		node_01.release();
+		node_02.release();
 	}
 }

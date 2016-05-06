@@ -92,16 +92,20 @@ public abstract class AbstractLayerClient implements LayerClient{
 	
 	public void discoverNodes() throws Exception {
 		HANDLERS.clear();
-		log.sendDebug("Discovering Peers ["+this.getClass()+"]");
+		log.sendDebug("Discovering Nodes ["+this.getClass()+"]");
 		ThreadPoolExecutor requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(100);
-		for(int i=AppLayerNode.MIN_PORT_RANGE;i<=AppLayerNode.MAX_PORT_RANGE;i++){
+		for(int i=getMinPort();i<=getMaxPort();i++){
 			requestExecutor.execute(new DiscoverNode(i));
 		}
 		while(!(requestExecutor.getActiveCount()==0));
+		log.sendInfo("Discovered "+HANDLERS.size()+" nodes ["+super.getClass()+"]");
 		requestExecutor.shutdown();
 		
 	}
+	
+	public abstract int getMinPort();
+	public abstract int getMaxPort();
 	
 	public LayerTcpConnectionHandler requestTcpNode() throws Exception{
 		if(HANDLERS.isEmpty()){

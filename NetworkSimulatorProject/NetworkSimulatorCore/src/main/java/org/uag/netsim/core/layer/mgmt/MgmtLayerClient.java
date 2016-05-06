@@ -1,4 +1,4 @@
-package org.uag.netsim.core.layer.app;
+package org.uag.netsim.core.layer.mgmt;
 
 import java.io.IOException;
 
@@ -8,41 +8,39 @@ import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.layer.AbstractLayerClient;
 
-@Component("appLayerClient")
+@Component("mgmtLayerClient")
 @Scope("prototype")
-public class AppLayerClient extends AbstractLayerClient{
-	
-	
-	
-	public AppLayerClient() throws Exception {
+public class MgmtLayerClient extends AbstractLayerClient{
+
+	public MgmtLayerClient() throws Exception {
 		super();
 	}
-	public AppLayerClient(ICoreLog log) throws Exception {
+	public MgmtLayerClient(ICoreLog log) throws Exception {
 		super(log);
 	}
 	
 	public byte[] getDiscoverRequest() throws IOException{
-		AppLayerRequest request = new AppLayerRequest();
-		request.setPrimitive(AppLayerRequest.PRIMITIVE.DISCOVER);
+		MgmtLayerRequest request = new MgmtLayerRequest();
+		request.setPrimitive(MgmtLayerRequest.PRIMITIVE.DISCOVER);
 		byte[] data = ObjectSerializer.serialize(request);
 		return data;
 	}
 
 	@Override
 	public byte[] getTcpNodeRequest() throws IOException {
-		AppLayerRequest request = new AppLayerRequest();
-		request.setPrimitive(AppLayerRequest.PRIMITIVE.REQUEST_NODE);
+		MgmtLayerRequest request = new MgmtLayerRequest();
+		request.setPrimitive(MgmtLayerRequest.PRIMITIVE.REQUEST_NODE);
 		byte[] data = ObjectSerializer.serialize(request);
 		return data;
 	}
+	
 	@Override
 	public int getMinPort(){
-		return AppLayerNode.MIN_PORT_RANGE;
+		return MgmtLayerNode.MIN_PORT_RANGE;
 	}
 	@Override
 	public int getMaxPort() {
-		return AppLayerNode.MAX_PORT_RANGE;
+		return MgmtLayerNode.MAX_PORT_RANGE;
 	}
-	
-	
+
 }
