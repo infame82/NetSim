@@ -1,28 +1,27 @@
 package org.uag.netsim.core.layer;
 
 import java.io.IOException;
-import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-public abstract class AbstractLayerTcpConnection<D extends LayerTcpRequestDispatcher> implements LayerTcpConnection{
+public class DefaultLayerTcpConnection< TD extends LayerTcpRequestDispatcher> implements LayerTcpConnection{
 
-	private final Class<D> dispatcherClass;
+	private final Class<TD> dispatcherClass;
 
 	private ServerSocket socket;
 	private ThreadPoolExecutor requestExecutor;
 	private boolean ready;
 	public static int MAX_THREADS = 10;
 	
-	public AbstractLayerTcpConnection(Class<D> dispatcherClass,int port) throws IOException{
+	public DefaultLayerTcpConnection(Class<TD> dispatcherClass) throws IOException{
 		this.dispatcherClass = dispatcherClass;
 		requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(MAX_THREADS);
 		ready = false;
-		socket = new ServerSocket(port);
+		socket = new ServerSocket(0);
 		
 	}
 	

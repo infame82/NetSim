@@ -1,9 +1,8 @@
-package org.uag.netsim.core.layer.app;
+package org.uag.netsim.core.layer.mac;
 
 import org.uag.netsim.core.layer.AbstractLayerRequest;
 
-
-public class AppLayerRequest extends AbstractLayerRequest<AppLayerRequest.LAYER_PRIMITIVE>{
+public class MacLayerRequest extends AbstractLayerRequest<MacLayerRequest.LAYER_PRIMITIVE>{
 
 	/**
 	 * 
@@ -20,5 +19,4 @@ public class AppLayerRequest extends AbstractLayerRequest<AppLayerRequest.LAYER_
 	public void setLayerPrimitive(LAYER_PRIMITIVE layerPrimitive) {
 		this.layerPrimitive = layerPrimitive;
 	}
-
 }

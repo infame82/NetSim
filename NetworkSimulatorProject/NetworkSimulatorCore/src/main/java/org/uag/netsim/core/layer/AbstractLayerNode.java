@@ -1,5 +1,6 @@
 package org.uag.netsim.core.layer;
 
+import java.net.BindException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -7,27 +8,39 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import org.uag.netsim.core.DefaultCoreLog;
+import org.uag.netsim.core.ICoreLog;
 
-public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C extends LayerTcpConnection> implements LayerNode {
+
+public abstract class AbstractLayerNode
+<RD extends LayerRequestDispatcher
+,TD extends LayerTcpRequestDispatcher
+,C extends LayerTcpConnection
+,L extends LayerClient> 
+implements LayerNode {
 	
-	private final Class<D> dispatcherClass;
+	private final Class<RD> dispatcherClass;
+	private final Class<TD> tcpDispatcherClass;
 	private final Class<C> tcpConnectionClass;
+	private final Class<L> selfLayerClientClass;
 	
 	
-	public static final Map<Class,List<Integer>> OPENED_PORTS = 
-			new HashMap<Class,List<Integer>>();
+	public final Map<Class<RD>,Set<Integer>> OPENED_PORTS = 
+			new HashMap<Class<RD>,Set<Integer>>();
 	
-	public static final Map<Class,List<LayerTcpConnection>> TCP_CONN_MAP = 
-			new HashMap<Class,List<LayerTcpConnection>>();
+	public final Map<Class<TD>,List<C>> TCP_CONN_MAP = 
+			new HashMap<Class<TD>,List<C>>();
 	
-	class LayerTcpComparator implements Comparator<LayerTcpConnection>{
+	class LayerTcpComparator implements Comparator<C>{
 
-		public int compare(LayerTcpConnection o1, LayerTcpConnection o2) {
+		public int compare(C o1, C o2) {
 			if(o1.getActiveCount()<o2.getActiveCount()){
 				return -1;
 			}
@@ -46,31 +59,44 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 
 	protected int minPortRange;
 	protected int maxPortRange;
+	protected L _selfLayerClient;
 	
-	public AbstractLayerNode(Class<D> dispatcherClass,Class<C> tcpConnectionClass){
+	public int getMaxPort(){
+		return maxPortRange;
+	}
+	
+	public AbstractLayerNode(Class<RD> dispatcherClass,Class<TD> tcpDispatcherClass,Class<C> tcpConnectionClass,Class<L> selfLayerClientClass){
 		this.dispatcherClass = dispatcherClass;
 		this.tcpConnectionClass = tcpConnectionClass;
+		this.selfLayerClientClass = selfLayerClientClass;
+		this.tcpDispatcherClass = tcpDispatcherClass;
 	}
 	
 	
-	public void init() throws Exception{
+	/*public AbstractLayerNode(Class<AppLayerRequestDispatcher> dispatcherClass2,
+			Class<AppLayerTcpRequestDispatcher> tcpDispatcherClass2, Class<DefaultLayerTcpConnection> class1,
+			Class<AppLayerClient> selfLayerClientClass2) {
+		// TODO Auto-generated constructor stub
+	}*/
+
+	public void init() throws Exception{		
+		
 		ready = false;
-		int availablePort = getAvailablePort();
-		if(availablePort==-1){
-			throw new Exception("Not available Port");
-		}
-		socket = new DatagramSocket(availablePort);
 		requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(10);
 	}
 	
 	public void release(){
 		ready = false;
-		if(socket!=null && socket.isConnected()){
-			socket.close();
+		if(socket!=null){
+			releasePort(socket.getLocalPort());
+			if(socket.isConnected()){
+				socket.close();
+			}
+			
 		}
 		requestExecutor.shutdownNow();
-		releasePort(socket.getLocalPort());
+		
 	}
 	public synchronized boolean isReady() {
 		return ready;
@@ -89,25 +115,55 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		socket.close();
 	}
 	
-	public void run() {
-		DatagramPacket packet = null;
-		byte[] buffer = null;
-		ready = true;
+	private void refreshOpenPorts() throws Exception{
+		_selfLayerClient.discoverNodes();
+		for(LayerNodeHandler handler : _selfLayerClient.getNodeHandlers()){
+			if(handler.getHost().equals(InetAddress.getLocalHost())){
+				getOpenedPorts().add(handler.getPort());
+			}
+		}
+	}
+	
+	public void run() {		
+		byte[] buffer = new byte[MSG_LENGHT];
+		DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
 		try{
+			_selfLayerClient = selfLayerClientClass.getConstructor(ICoreLog.class).newInstance(new DefaultCoreLog());
+			for(LayerNodeHandler handler : _selfLayerClient.getNodeHandlers()){
+				if(handler.getHost().equals(InetAddress.getLocalHost())){
+					getOpenedPorts().add(handler.getPort());
+				}
+			}
+			do{
+				int availablePort = getAvailablePort();
+				if(availablePort!=-1){
+					try{
+						socket = new DatagramSocket(availablePort);
+						socket.setBroadcast(true);
+						ready = true;
+						System.out.println("Listening on "+availablePort);;
+					}catch(BindException be){
+						refreshOpenPorts();
+					}
+				}else{
+					throw new Exception("Not available Port");
+				}				
+			}while(!ready);
 			while(ready){
-				buffer = new byte[MSG_LENGHT];
-				packet = new DatagramPacket(buffer, buffer.length);
 				socket.receive(packet);
 				LayerRequestDispatcher dispatcher = dispatcherClass.getConstructor(LayerNode.class,DatagramPacket.class).newInstance(this,packet);
 				requestExecutor.execute(dispatcher);
+				buffer = new byte[MSG_LENGHT];
+				packet = new DatagramPacket(buffer, buffer.length);
 			}
 		}catch(Exception e){
+			e.printStackTrace();
 		}
 	}
 	
 	public synchronized int getAvailablePort(){
 		int port = minPortRange;
-		List<Integer> openedPorts = getOpenedPorts();
+		Set<Integer> openedPorts = getOpenedPorts();
 		while( port<= maxPortRange){
 			if(!openedPorts.contains(port)){
 				openedPorts.add(port);
@@ -115,26 +171,29 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 			}
 			port++;
 		}
+		
 		return -1;
 	}
 	
 	public synchronized void releasePort(int port){
 		getOpenedPorts().remove((Integer)port);
+		
 	}
 	
-	private List<Integer> getOpenedPorts(){
-		List<Integer> openedPorts = OPENED_PORTS.get(getClass());
+	public Set<Integer> getOpenedPorts(){
+		
+		Set<Integer> openedPorts = OPENED_PORTS.get(dispatcherClass);
 		if(openedPorts==null){
-			openedPorts = new ArrayList<Integer>();
-			OPENED_PORTS.put(getClass(), openedPorts);
+			openedPorts = new LinkedHashSet<Integer>();
+			OPENED_PORTS.put(dispatcherClass, openedPorts);
 		}
 		return openedPorts;
 	}
-	public synchronized LayerTcpConnection getAvailableTcpConnection() {
-		List<LayerTcpConnection> connections = TCP_CONN_MAP.get(tcpConnectionClass);
+	public synchronized C getAvailableTcpConnection() {
+		List<C> connections = TCP_CONN_MAP.get(tcpDispatcherClass);
 		if(connections==null){
-			connections = new ArrayList<LayerTcpConnection>();			
-			TCP_CONN_MAP.put(tcpConnectionClass, connections);
+			connections = new ArrayList<C>();			
+			TCP_CONN_MAP.put(tcpDispatcherClass, connections);
 			return null;
 		}
 		if(connections.isEmpty()){
@@ -144,17 +203,12 @@ public abstract class AbstractLayerNode<D extends LayerRequestDispatcher,C exten
 		return connections.get(0);
 	}
 	
-	public synchronized LayerTcpConnection openTcpConnection() throws Exception {
-		LayerTcpConnection conn = getAvailableTcpConnection();
-		
-		if(conn == null){
-			int port = getAvailablePort();
-			if(port == -1){
-				throw new Exception("Not available port");
-			}
-			conn = tcpConnectionClass.getConstructor(int.class).newInstance(port);
+	public synchronized C openTcpConnection() throws Exception {
+		C conn = getAvailableTcpConnection();		
+		if(conn == null || conn.isBusy()){
+			conn = tcpConnectionClass.getConstructor(Class.class).newInstance(tcpDispatcherClass);
 			requestExecutor.execute(conn);
-			TCP_CONN_MAP.get(tcpConnectionClass).add(conn);
+			TCP_CONN_MAP.get(tcpDispatcherClass).add(conn);
 		}
 		return conn;
 	}

@@ -1,4 +1,4 @@
-package org.uag.netsim.core.layer.app;
+package org.uag.netsim.core.layer.mac;
 
 import javax.annotation.PostConstruct;
 
@@ -8,20 +8,19 @@ import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
 
 @SuppressWarnings("rawtypes")
-@Component("appLayerNode")
+@Component("macLayerNode")
 @Scope("prototype")
-public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
-,AppLayerTcpRequestDispatcher
+public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,MacLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,AppLayerClient> {
+,MacLayerClient> {
 
 	
-	public AppLayerNode() {
-		super(AppLayerRequestDispatcher.class,AppLayerTcpRequestDispatcher.class,DefaultLayerTcpConnection.class,AppLayerClient.class);
+	public MacLayerNode() {
+		super(MacLayerRequestDispatcher.class,MacLayerTcpRequestDispatcher.class ,DefaultLayerTcpConnection.class,MacLayerClient.class);
 	}
 
-	public static int MIN_PORT_RANGE = 9300;
-	public static int MAX_PORT_RANGE = 9309;
+	public static int MIN_PORT_RANGE = 9100;
+	public static int MAX_PORT_RANGE = 9109;
 	
 	@PostConstruct
 	public void construct() throws Exception{
@@ -29,7 +28,5 @@ public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 		maxPortRange = MAX_PORT_RANGE;
 		super.init();
 	}
-	
 
-	
 }

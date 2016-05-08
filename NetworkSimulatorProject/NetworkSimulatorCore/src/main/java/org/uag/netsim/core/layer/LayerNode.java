@@ -26,5 +26,8 @@ public interface LayerNode extends Runnable{
 	
 	InetAddress getHost();
 	
+	//int getMaxPort();
+	
+	//List<Integer> getOpenedPorts();
 	
 }

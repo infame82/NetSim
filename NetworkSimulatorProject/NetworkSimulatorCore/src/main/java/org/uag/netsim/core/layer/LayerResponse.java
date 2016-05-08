@@ -12,4 +12,5 @@ public interface LayerResponse extends Serializable{
     STATUS getStatus();
 
     String getData();
+    
 }

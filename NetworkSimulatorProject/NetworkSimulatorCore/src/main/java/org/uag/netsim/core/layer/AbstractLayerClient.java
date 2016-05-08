@@ -1,6 +1,5 @@
 package org.uag.netsim.core.layer;
 
-import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
@@ -11,17 +10,17 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import org.uag.netsim.core.DefaultCoreLog;
 import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
-import org.uag.netsim.core.layer.app.AppLayerNode;
 
-public abstract class AbstractLayerClient implements LayerClient{
+public abstract class AbstractLayerClient<LR extends LayerRequest<? extends Enum<?>>> implements LayerClient{
 	
 	public ICoreLog log;
-	
-	public static final List<LayerNodeHandler> HANDLERS = new ArrayList<LayerNodeHandler>();
+	protected final List<LayerNodeHandler> HANDLERS = new ArrayList<LayerNodeHandler>();
+	private Class<LR> layerRequestClass;
 	
 	class DiscoverNode implements Runnable{
 
@@ -37,6 +36,7 @@ public abstract class AbstractLayerClient implements LayerClient{
 				DatagramPacket rpacket = new DatagramPacket(buffer, buffer.length);
 				
 				socket = new DatagramSocket();
+				//socket.setBroadcast(true);
 				socket.setSoTimeout(1000);
 				InetSocketAddress broadcastAddress = new InetSocketAddress( "255.255.255.255", port );
 				byte[] data = getDiscoverRequest();
@@ -44,10 +44,11 @@ public abstract class AbstractLayerClient implements LayerClient{
 				socket.send(packet);
 				socket.receive(rpacket);
 				LayerNodeHandler handler = (LayerNodeHandler)ObjectSerializer.unserialize(rpacket.getData());
-				synchronized(HANDLERS){
-					HANDLERS.add(handler);
+				synchronized(getNodeHandlers()){
+					getNodeHandlers().add(handler);
 				}
 			}catch(SocketTimeoutException ste){
+				//ste.printStackTrace();
 			}catch (Exception e) {
 				e.printStackTrace();
 			}finally{
@@ -76,12 +77,13 @@ public abstract class AbstractLayerClient implements LayerClient{
 	
 	private LayerNodeHandlerComparator layerHandlerComparator;
 	
-	public AbstractLayerClient() throws Exception{
-		this(new DefaultCoreLog());
+	public AbstractLayerClient(Class<LR> layerRequestClass) throws Exception{
+		this(layerRequestClass,new DefaultCoreLog());
 	}
 	
-	public AbstractLayerClient(ICoreLog log) throws Exception{
+	public AbstractLayerClient(Class<LR> layerRequestClass,ICoreLog log) throws Exception{
 		this.log = log;
+		this.layerRequestClass = layerRequestClass;
 		if(log==null){
 			this.log = new DefaultCoreLog();
 		}
@@ -91,16 +93,18 @@ public abstract class AbstractLayerClient implements LayerClient{
 	}
 	
 	public void discoverNodes() throws Exception {
-		HANDLERS.clear();
+		getNodeHandlers().clear();
 		log.sendDebug("Discovering Nodes ["+this.getClass()+"]");
 		ThreadPoolExecutor requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(100);
 		for(int i=getMinPort();i<=getMaxPort();i++){
 			requestExecutor.execute(new DiscoverNode(i));
 		}
-		while(!(requestExecutor.getActiveCount()==0));
-		log.sendInfo("Discovered "+HANDLERS.size()+" nodes ["+super.getClass()+"]");
+		//while(!(requestExecutor.getActiveCount()==0));
 		requestExecutor.shutdown();
+		while (!requestExecutor.awaitTermination(10, TimeUnit.SECONDS));
+		log.sendInfo("Discovered "+getNodeHandlers().size()+" nodes ["+super.getClass()+"]");
+		
 		
 	}
 	
@@ -108,15 +112,15 @@ public abstract class AbstractLayerClient implements LayerClient{
 	public abstract int getMaxPort();
 	
 	public LayerTcpConnectionHandler requestTcpNode() throws Exception{
-		if(HANDLERS.isEmpty()){
+		if(getNodeHandlers().isEmpty()){
 			discoverNodes();
 		}
-		if(HANDLERS.isEmpty()){
+		if(getNodeHandlers().isEmpty()){
 			throw new Exception("Not available Nodes");
 		}
 		LayerTcpConnectionHandler tcpHandler = null;
-		Collections.sort(HANDLERS, layerHandlerComparator);
-		LayerNodeHandler handler = HANDLERS.get(0);
+		Collections.sort(getNodeHandlers(), layerHandlerComparator);
+		LayerNodeHandler handler = getNodeHandlers().get(0);
 		DatagramSocket socket = null;
 		try {
 			byte[] buffer = new byte[512];
@@ -144,7 +148,23 @@ public abstract class AbstractLayerClient implements LayerClient{
 	public void enableLog(boolean enable){
 		log.setEnableLog(enable);
 	}
-	public abstract byte[] getDiscoverRequest() throws IOException;
-	public abstract byte[] getTcpNodeRequest() throws IOException;
+	
+	public List<LayerNodeHandler> getNodeHandlers() {
+		return HANDLERS;
+	}
+	private byte[] getDiscoverRequest() throws Exception{
+		LR request = layerRequestClass.getConstructor().newInstance();
+		request.setPrimitive(LR.PRIMITIVE.DISCOVER);
+		byte[] data = ObjectSerializer.serialize(request);
+		return data;
+	}
+
+
+	private byte[] getTcpNodeRequest() throws Exception {
+		LR request = layerRequestClass.getConstructor().newInstance();
+		request.setPrimitive(LR.PRIMITIVE.REQUEST_NODE);
+		byte[] data = ObjectSerializer.serialize(request);
+		return data;
+	}
 
 }

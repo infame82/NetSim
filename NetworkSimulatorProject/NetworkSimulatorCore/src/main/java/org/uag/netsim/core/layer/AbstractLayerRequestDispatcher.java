@@ -3,13 +3,10 @@ package org.uag.netsim.core.layer;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.SocketException;
 
 import org.uag.netsim.core.ObjectSerializer;
-import org.uag.netsim.core.layer.app.AppLayerRequest;
-import org.uag.netsim.core.layer.app.AppLayerResponse;
 
-public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest> implements LayerRequestDispatcher{
+public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest<? extends Enum<?>>> implements LayerRequestDispatcher{
 	protected DatagramPacket packet;
 	protected LayerNode node;
 	
@@ -26,6 +23,7 @@ public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest> imp
 		} 
 	}
 
+	@SuppressWarnings("unchecked")
 	public void resolveRequest(Object obj) throws Exception {
 		if(obj instanceof LayerRequest){
 			sendMsg(ObjectSerializer.serialize(resolveRequest((R)obj)));
@@ -35,14 +33,22 @@ public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest> imp
 
 
 	private void sendMsg(byte[] responseContent) throws IOException {
-		int port = node.getAvailablePort();
-		DatagramSocket socket = new DatagramSocket(port);
+		DatagramSocket socket  = new DatagramSocket();
 		DatagramPacket packet = new DatagramPacket(responseContent,
 				responseContent.length, this.packet.getAddress(), this.packet.getPort());
 		socket.send(packet);
 		socket.close();
-		node.releasePort(port);
+	}
+	
+	protected Object resolveRequest(R request) throws Exception{
+		if(request.getPrimitive() == LayerRequest.PRIMITIVE.REQUEST_NODE){
+			LayerTcpConnection tcpConnection = node.openTcpConnection();
+			return new DefaultLayerTcpConnectionHandler(tcpConnection.getHost(),tcpConnection.getPort(),tcpConnection.getActiveCount());
+		}else if(request.getPrimitive() == LayerRequest.PRIMITIVE.DISCOVER){
+			return new DefaultLayerNodeHandler(node.getHost(),node.getPort(),node.getActiveCount());
+		}
+		return resolveLayerOperation(request);
 	}
 
-	protected abstract Object resolveRequest(R request) throws Exception;
+	protected abstract Object resolveLayerOperation(R request) throws Exception;
 }
