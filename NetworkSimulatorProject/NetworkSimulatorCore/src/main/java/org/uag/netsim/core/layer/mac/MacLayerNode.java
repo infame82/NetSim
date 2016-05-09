@@ -2,10 +2,13 @@ package org.uag.netsim.core.layer.mac;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
+import org.uag.netsim.core.layer.phy.PhyLayerClient;
 
 @SuppressWarnings("rawtypes")
 @Component("macLayerNode")
@@ -14,6 +17,9 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 ,DefaultLayerTcpConnection
 ,MacLayerClient> {
 
+	@Autowired
+	@Qualifier("phyLayerClient")
+	private PhyLayerClient phyClient;
 	
 	public MacLayerNode() {
 		super(MacLayerRequestDispatcher.class,MacLayerTcpRequestDispatcher.class ,DefaultLayerTcpConnection.class,MacLayerClient.class);

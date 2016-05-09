@@ -12,6 +12,7 @@
 	<context:component-scan base-package="org.uag.netsim.core.layer.app
 	, org.uag.netsim.core.layer.mgmt
 	, org.uag.netsim.core.layer.mac
-	, org.uag.netsim.core.layer.network" />
+	, org.uag.netsim.core.layer.network
+	, org.uag.netsim.core.layer.phy" />
 
 </beans>
