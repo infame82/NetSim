@@ -16,6 +16,12 @@
 	</properties>
 	<dependencies>
 		<dependency>
+  		<groupId>org.uag.netsim</groupId>
+		<artifactId>NetworkSimulatorCoreI</artifactId>
+		<version>${project.version}</version>
+		<scope>compile</scope>
+  	</dependency>
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<scope>test</scope>

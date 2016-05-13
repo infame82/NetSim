@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-
-<suite name="Simulation Model Test Suite" parallel="tests" thread-count="5">
-	<test name="Sensores">
-		<classes>
-			<class name="org.uag.netsim.core.layer.app.AppLayerNodeTest" />
-		</classes>
-	</test>
-</suite>

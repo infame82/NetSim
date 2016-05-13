@@ -78,12 +78,14 @@ implements LayerNode {
 			Class<AppLayerClient> selfLayerClientClass2) {
 		// TODO Auto-generated constructor stub
 	}*/
+	
+	public static int ASYNC_REQUEST = 1;
 
 	public void init() throws Exception{		
 		
 		ready = false;
 		requestExecutor = (ThreadPoolExecutor) Executors
-				.newFixedThreadPool(10);
+				.newFixedThreadPool(ASYNC_REQUEST);
 	}
 	
 	public void release(){
@@ -103,7 +105,7 @@ implements LayerNode {
 	}
 
 	public synchronized boolean isBusy() {
-		return requestExecutor.getActiveCount()>=10;
+		return requestExecutor.getActiveCount()>=ASYNC_REQUEST;
 	}
 	
 	public synchronized int getActiveCount(){
@@ -151,8 +153,7 @@ implements LayerNode {
 			}while(!ready);
 			while(ready){
 				socket.receive(packet);
-				LayerRequestDispatcher dispatcher = dispatcherClass.getConstructor(LayerNode.class,DatagramPacket.class).newInstance(this,packet);
-				requestExecutor.execute(dispatcher);
+				requestExecutor.execute(dispatcherClass.getConstructor(LayerNode.class,DatagramPacket.class).newInstance(this,packet));
 				buffer = new byte[MSG_LENGHT];
 				packet = new DatagramPacket(buffer, buffer.length);
 			}
