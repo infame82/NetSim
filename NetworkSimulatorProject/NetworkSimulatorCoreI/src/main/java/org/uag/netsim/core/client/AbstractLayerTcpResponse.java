@@ -1,4 +1,6 @@
-package org.uag.netsim.core.layer;
+package org.uag.netsim.core.client;
+
+import org.uag.netsim.core.layer.LayerTcpResponse;
 
 /**
  * Created by david on 21/02/16.

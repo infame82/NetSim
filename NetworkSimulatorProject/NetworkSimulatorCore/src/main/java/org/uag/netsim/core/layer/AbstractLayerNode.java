@@ -15,6 +15,7 @@ import java.util.Set;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import org.apache.log4j.Logger;
 import org.uag.netsim.core.DefaultCoreLog;
 import org.uag.netsim.core.ICoreLog;
 
@@ -31,6 +32,8 @@ implements LayerNode {
 	private final Class<C> tcpConnectionClass;
 	private final Class<L> selfLayerClientClass;
 	
+	
+	final static Logger logger = Logger.getLogger(AbstractLayerNode.class);
 	
 	public final Map<Class<RD>,Set<Integer>> OPENED_PORTS = 
 			new HashMap<Class<RD>,Set<Integer>>();
@@ -73,22 +76,18 @@ implements LayerNode {
 	}
 	
 	
-	/*public AbstractLayerNode(Class<AppLayerRequestDispatcher> dispatcherClass2,
-			Class<AppLayerTcpRequestDispatcher> tcpDispatcherClass2, Class<DefaultLayerTcpConnection> class1,
-			Class<AppLayerClient> selfLayerClientClass2) {
-		// TODO Auto-generated constructor stub
-	}*/
 	
 	public static int ASYNC_REQUEST = 1;
 
 	public void init() throws Exception{		
-		
+		logger.info("Initializing "+super.getClass()+"...");
 		ready = false;
 		requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(ASYNC_REQUEST);
 	}
 	
 	public void release(){
+		logger.info("Realising "+super.getClass()+" on "+socket.getLocalPort());
 		ready = false;
 		if(socket!=null){
 			releasePort(socket.getLocalPort());
@@ -98,6 +97,7 @@ implements LayerNode {
 			
 		}
 		requestExecutor.shutdownNow();
+		logger.info("Released "+super.getClass());
 		
 	}
 	public synchronized boolean isReady() {
@@ -136,8 +136,9 @@ implements LayerNode {
 					getOpenedPorts().add(handler.getPort());
 				}
 			}
+			int availablePort;
 			do{
-				int availablePort = getAvailablePort();
+				availablePort = getAvailablePort();
 				if(availablePort!=-1){
 					try{
 						socket = new DatagramSocket(availablePort);
@@ -151,6 +152,7 @@ implements LayerNode {
 					throw new Exception("Not available Port");
 				}				
 			}while(!ready);
+			logger.info("Listening "+super.getClass()+" on "+availablePort);
 			while(ready){
 				socket.receive(packet);
 				requestExecutor.execute(dispatcherClass.getConstructor(LayerNode.class,DatagramPacket.class).newInstance(this,packet));
@@ -208,6 +210,7 @@ implements LayerNode {
 		C conn = getAvailableTcpConnection();		
 		if(conn == null || conn.isBusy()){
 			conn = tcpConnectionClass.getConstructor(Class.class).newInstance(tcpDispatcherClass);
+			logger.info("Opened TCP node "+conn.getClass()+" on "+conn.getPort());
 			requestExecutor.execute(conn);
 			TCP_CONN_MAP.get(tcpDispatcherClass).add(conn);
 		}

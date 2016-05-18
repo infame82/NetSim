@@ -1,6 +1,6 @@
 package org.uag.netsim.core.layer.mac;
 
-import org.uag.netsim.core.layer.AbstractLayerTcpResponse;
+import org.uag.netsim.core.client.AbstractLayerTcpResponse;
 
 public class MacLayerTcpResponse extends AbstractLayerTcpResponse {
 

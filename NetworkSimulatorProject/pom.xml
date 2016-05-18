@@ -54,6 +54,5 @@
     <module>NetworkSimulatorZiGB</module>
     <module>NetworkSimulatorCoreI</module>
     <module>NetworkSimulatorZiGBAppClient</module>
-    <module>NetworkSimulatorCoreClient</module>
   </modules>
 </project>

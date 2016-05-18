@@ -1,4 +1,4 @@
-package org.uag.netsim.core.layer.app;
+package org.uag.netsim.core.layer.app.client;
 
 import org.uag.netsim.core.layer.LayerTcpRequest;
 

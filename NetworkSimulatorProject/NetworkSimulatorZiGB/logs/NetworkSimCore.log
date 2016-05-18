@@ -1,0 +1,17 @@
+2016-05-17 19:00:37 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-05-17 19:00:37 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f1fba17, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@185d8b6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67784306]
+2016-05-17 19:00:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-05-17 19:00:37 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@87f383f: startup date [Tue May 17 19:00:37 CDT 2016]; root of context hierarchy
+2016-05-17 19:00:39 INFO  AbstractLayerNode:83 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-05-17 19:00:40 INFO  AbstractLayerNode:90 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-05-17 19:00:40 INFO  AbstractLayerNode:100 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-05-17 19:00:40 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@87f383f: startup date [Tue May 17 19:00:37 CDT 2016]; root of context hierarchy
+2016-05-17 19:33:53 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-05-17 19:33:53 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f1fba17, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@185d8b6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67784306]
+2016-05-17 19:33:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-05-17 19:33:54 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@87f383f: startup date [Tue May 17 19:33:54 CDT 2016]; root of context hierarchy
+2016-05-17 19:33:55 INFO  AbstractLayerNode:83 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-05-17 19:33:56 INFO  AbstractLayerNode:155 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-05-17 19:33:56 INFO  AbstractLayerNode:90 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-05-17 19:33:56 INFO  AbstractLayerNode:100 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-05-17 19:33:56 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@87f383f: startup date [Tue May 17 19:33:54 CDT 2016]; root of context hierarchy

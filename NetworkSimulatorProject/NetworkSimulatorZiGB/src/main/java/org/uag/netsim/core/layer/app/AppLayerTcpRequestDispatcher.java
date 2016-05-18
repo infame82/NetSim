@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.Socket;
 
 import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
+import org.uag.netsim.core.layer.app.client.AppLayerTcpRequest;
+import org.uag.netsim.core.layer.app.client.AppLayerTcpResponse;
 
 public class AppLayerTcpRequestDispatcher
         extends AbstractLayerTcpRequestDispatcher<AppLayerTcpRequest,AppLayerTcpResponse>{

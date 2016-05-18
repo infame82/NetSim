@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
+import org.apache.log4j.Logger;
 import org.uag.netsim.core.ObjectSerializer;
 
 public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest<? extends Enum<?>>> implements LayerRequestDispatcher{
 	protected DatagramPacket packet;
 	protected LayerNode node;
+	final static Logger logger = Logger.getLogger(AbstractLayerRequestDispatcher.class);
 	
 	public AbstractLayerRequestDispatcher(LayerNode node,DatagramPacket packet) {
 		this.packet = packet;
@@ -41,10 +43,13 @@ public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest<? ex
 	}
 	
 	protected Object resolveRequest(R request) throws Exception{
+		logger.debug("Resolving request "+node.getClass()+" on "+node.getPort());
 		if(request.getPrimitive() == LayerRequest.PRIMITIVE.REQUEST_NODE){
+			logger.debug("Requesting TCP node "+node.getClass()+" on "+node.getPort());
 			LayerTcpConnection tcpConnection = node.openTcpConnection();
 			return new DefaultLayerTcpConnectionHandler(tcpConnection.getHost(),tcpConnection.getPort(),tcpConnection.getActiveCount());
 		}else if(request.getPrimitive() == LayerRequest.PRIMITIVE.DISCOVER){
+			logger.debug("Discover request "+node.getClass()+" on "+node.getPort());
 			return new DefaultLayerNodeHandler(node.getHost(),node.getPort(),node.getActiveCount());
 		}
 		return resolveLayerOperation(request);
