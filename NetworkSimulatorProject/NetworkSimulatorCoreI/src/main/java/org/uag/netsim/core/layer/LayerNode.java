@@ -16,9 +16,11 @@ public interface LayerNode extends Runnable{
 	
 	void releasePort(int port);
 	
-	void release();
+	void release() throws Exception;
 	
 	LayerTcpConnection openTcpConnection() throws Exception;
+	
+	void closeTcpConnection(int tcpPort) throws Exception;
 	
 	LayerTcpConnection getAvailableTcpConnection();
 	

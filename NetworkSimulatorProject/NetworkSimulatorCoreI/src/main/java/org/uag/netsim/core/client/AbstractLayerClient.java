@@ -3,7 +3,6 @@ package org.uag.netsim.core.client;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
-import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -28,19 +27,18 @@ public abstract class AbstractLayerClient<LR extends LayerRequest<? extends Enum
 	
 	class DiscoverNode implements Runnable{
 
+		private DatagramSocket socket;
 		private int port;
 		public DiscoverNode(int port){
 			this.port = port;
 		}
 
 		public void run() {
-			DatagramSocket socket = null;
 			try {
 				byte[] buffer = new byte[512];
 				DatagramPacket rpacket = new DatagramPacket(buffer, buffer.length);
 				
 				socket = new DatagramSocket();
-				//socket.setBroadcast(true);
 				socket.setSoTimeout(1000);
 				InetSocketAddress broadcastAddress = new InetSocketAddress( "255.255.255.255", port );
 				byte[] data = getDiscoverRequest();
@@ -51,17 +49,18 @@ public abstract class AbstractLayerClient<LR extends LayerRequest<? extends Enum
 				synchronized(getNodeHandlers()){
 					getNodeHandlers().add(handler);
 				}
-			}catch(SocketTimeoutException ste){
-				//ste.printStackTrace();
 			}catch (Exception e) {
-				e.printStackTrace();
 			}finally{
-				if(socket!=null){
-					socket.close();
-					socket.disconnect();
-				}
+				release();
 			}
 			
+		}
+		
+		public void release(){
+			if(socket!=null){
+				socket.close();
+				socket.disconnect();
+			}
 		}
 	}
 	
@@ -100,13 +99,18 @@ public abstract class AbstractLayerClient<LR extends LayerRequest<? extends Enum
 		getNodeHandlers().clear();
 		log.sendDebug("Discovering Nodes ["+this.getClass()+"]");
 		ThreadPoolExecutor requestExecutor = (ThreadPoolExecutor) Executors
-				.newFixedThreadPool(100);
+				.newFixedThreadPool(10);
+		List<DiscoverNode> dns = new ArrayList<DiscoverNode>();
 		for(int i=getMinPort();i<=getMaxPort();i++){
-			requestExecutor.execute(new DiscoverNode(i));
+			DiscoverNode dn = new DiscoverNode(i);
+			dns.add(dn);
+			requestExecutor.execute(dn);
 		}
-		//while(!(requestExecutor.getActiveCount()==0));
 		requestExecutor.shutdown();
-		while (!requestExecutor.awaitTermination(10, TimeUnit.SECONDS));
+		while (!requestExecutor.awaitTermination(2, TimeUnit.SECONDS));
+		for(DiscoverNode dn:dns){
+			dn.release();
+		}
 		log.sendInfo("Discovered "+getNodeHandlers().size()+" nodes ["+super.getClass()+"]");
 		
 		
@@ -116,37 +120,11 @@ public abstract class AbstractLayerClient<LR extends LayerRequest<? extends Enum
 	public abstract int getMaxPort();
 	
 	public LayerTcpConnectionHandler requestTcpNode() throws Exception{
-		if(getNodeHandlers().isEmpty()){
-			discoverNodes();
-		}
-		if(getNodeHandlers().isEmpty()){
-			throw new Exception("Not available Nodes");
-		}
-		LayerTcpConnectionHandler tcpHandler = null;
-		Collections.sort(getNodeHandlers(), layerHandlerComparator);
-		LayerNodeHandler handler = getNodeHandlers().get(0);
-		DatagramSocket socket = null;
-		try {
-			byte[] buffer = new byte[512];
-			DatagramPacket rpacket = new DatagramPacket(buffer, buffer.length);
-			socket = new DatagramSocket();//handler.getPort(),handler.getHost());
-			byte[] data = getTcpNodeRequest();
-			DatagramPacket packet = new DatagramPacket(data, data.length, handler.getHost(),handler.getPort());
-			socket.send(packet);
-			socket.receive(rpacket);
-			tcpHandler = (LayerTcpConnectionHandler)ObjectSerializer.unserialize(rpacket.getData());
-		}catch(SocketTimeoutException sto){
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			if(socket!=null){
-				socket.close();
-				socket.disconnect();
-			}
-		}
+		LR request = layerRequestClass.getConstructor().newInstance();
+		request.setPrimitive(LR.PRIMITIVE.REQUEST_NODE);
+		DatagramPacket response = sendRequest(request);
+		LayerTcpConnectionHandler tcpHandler = (LayerTcpConnectionHandler)ObjectSerializer.unserialize(response.getData());
 		return tcpHandler;
-		
 	}
 
 	public void enableLog(boolean enable){
@@ -163,13 +141,31 @@ public abstract class AbstractLayerClient<LR extends LayerRequest<? extends Enum
 		byte[] data = ObjectSerializer.serialize(request);
 		return data;
 	}
-
-
-	private byte[] getTcpNodeRequest() throws Exception {
-		LR request = layerRequestClass.getConstructor().newInstance();
-		request.setPrimitive(LR.PRIMITIVE.REQUEST_NODE);
-		byte[] data = ObjectSerializer.serialize(request);
-		return data;
+	
+	public DatagramPacket sendRequest(LR request) throws Exception{
+		discoverNodes();
+		if(HANDLERS.size()==0){
+			throw new Exception("No server node found");
+		}		
+		Collections.sort(getNodeHandlers(), layerHandlerComparator);
+		LayerNodeHandler handler = getNodeHandlers().get(0);
+		DatagramSocket socket = null;
+		byte[] buffer = new byte[512];
+		DatagramPacket rpacket = new DatagramPacket(buffer, buffer.length);
+		try {
+			
+			socket = new DatagramSocket();//handler.getPort(),handler.getHost());
+			byte[] data = ObjectSerializer.serialize(request);
+			DatagramPacket packet = new DatagramPacket(data, data.length, handler.getHost(),handler.getPort());
+			socket.send(packet);
+			socket.receive(rpacket);
+		}finally{
+			if(socket!=null){
+				socket.close();
+				socket.disconnect();
+			}
+		}
+		return rpacket;
 	}
 
 }

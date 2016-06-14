@@ -4,12 +4,13 @@ import java.io.IOException;
 import java.net.Socket;
 
 import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
+import org.uag.netsim.core.layer.LayerNode;
 
 public class PhyLayerTcpRequestDispatcher 
 extends AbstractLayerTcpRequestDispatcher<PhyLayerTcpRequest,PhyLayerTcpResponse>{
 
-	public PhyLayerTcpRequestDispatcher(Socket socket) throws IOException {
-        super(socket);
+	public PhyLayerTcpRequestDispatcher(LayerNode node,Socket socket) throws IOException {
+        super(node,socket);
     }
 
     @Override

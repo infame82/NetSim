@@ -7,11 +7,15 @@ import java.io.Serializable;
  */
 public interface LayerRequest <P extends Enum<P>> extends Serializable {
 	
-	public enum PRIMITIVE{REQUEST_NODE,DISCOVER}
+	public enum PRIMITIVE{REQUEST_NODE,DISCOVER,CLOSE_NODE}
 
 	PRIMITIVE getPrimitive();
     void setPrimitive(PRIMITIVE primitive);
     
     P getLayerPrimitive();
     void setLayerPrimitive(P primitive);
+    
+    String getFrame();
+    
+    void setFrame(String frame);
 }

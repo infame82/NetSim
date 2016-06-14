@@ -15,14 +15,15 @@ public class DefaultLayerTcpConnection< TD extends LayerTcpRequestDispatcher> im
 	private ThreadPoolExecutor requestExecutor;
 	private boolean ready;
 	public static int MAX_THREADS = 10;
+	protected LayerNode node;
 	
-	public DefaultLayerTcpConnection(Class<TD> dispatcherClass) throws IOException{
+	public DefaultLayerTcpConnection(LayerNode node,Class<TD> dispatcherClass) throws IOException{
 		this.dispatcherClass = dispatcherClass;
 		requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(MAX_THREADS);
 		ready = false;
 		socket = new ServerSocket(0);
-		
+		this.node = node;
 	}
 	
 	public int getPort(){
@@ -42,16 +43,16 @@ public class DefaultLayerTcpConnection< TD extends LayerTcpRequestDispatcher> im
 	}
 
 	public void release(){
-		requestExecutor.shutdownNow();
+		
 		ready = false;
 		try {
-			if(socket!=null && !socket.isClosed()) {
+			if(socket!=null) {
 				socket.close();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		requestExecutor.shutdownNow();
 	}
 	
 	public int getActiveCount(){
@@ -63,7 +64,7 @@ public class DefaultLayerTcpConnection< TD extends LayerTcpRequestDispatcher> im
 		try {
 			while (ready) {
 				LayerTcpRequestDispatcher dispatcher  =
-						dispatcherClass.getConstructor(Socket.class).newInstance(socket.accept());
+						dispatcherClass.getConstructor(LayerNode.class,Socket.class).newInstance(node,socket.accept());
 				requestExecutor.execute(dispatcher);
 			}
 		}catch(Exception e){

@@ -4,6 +4,7 @@ import java.net.BindException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -31,7 +32,7 @@ implements LayerNode {
 	private final Class<TD> tcpDispatcherClass;
 	private final Class<C> tcpConnectionClass;
 	private final Class<L> selfLayerClientClass;
-	
+	//private Map<Integer,C> tcpConnections;
 	
 	final static Logger logger = Logger.getLogger(AbstractLayerNode.class);
 	
@@ -59,7 +60,8 @@ implements LayerNode {
 	protected boolean ready;
 	private DatagramSocket socket;
 	private ThreadPoolExecutor requestExecutor;
-
+	
+	private ThreadPoolExecutor tcpRequestExecutor;
 	protected int minPortRange;
 	protected int maxPortRange;
 	protected L _selfLayerClient;
@@ -73,6 +75,7 @@ implements LayerNode {
 		this.tcpConnectionClass = tcpConnectionClass;
 		this.selfLayerClientClass = selfLayerClientClass;
 		this.tcpDispatcherClass = tcpDispatcherClass;
+		//tcpConnections = new HashMap<Integer,C>();
 	}
 	
 	
@@ -84,19 +87,30 @@ implements LayerNode {
 		ready = false;
 		requestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(ASYNC_REQUEST);
+		tcpRequestExecutor = (ThreadPoolExecutor) Executors
+				.newFixedThreadPool(ASYNC_REQUEST);
 	}
 	
-	public void release(){
+	public void release() throws Exception{
 		logger.info("Realising "+super.getClass()+" on "+socket.getLocalPort());
+		
+		List<C> connections = TCP_CONN_MAP.get(tcpDispatcherClass);
+		if(connections!=null){
+		for(C conn:connections){
+			conn.release();
+		}
+		}
 		ready = false;
 		if(socket!=null){
 			releasePort(socket.getLocalPort());
-			if(socket.isConnected()){
+			//if(socket.isConnected()){
 				socket.close();
-			}
+			//}
 			
 		}
-		requestExecutor.shutdownNow();
+		requestExecutor.shutdown();
+		tcpRequestExecutor.shutdown();
+		//while (!requestExecutor.awaitTermination(2, TimeUnit.SECONDS));
 		logger.info("Released "+super.getClass());
 		
 	}
@@ -144,7 +158,7 @@ implements LayerNode {
 						socket = new DatagramSocket(availablePort);
 						socket.setBroadcast(true);
 						ready = true;
-						System.out.println("Listening on "+availablePort);;
+						logger.info("Listening on "+availablePort);
 					}catch(BindException be){
 						refreshOpenPorts();
 					}
@@ -153,12 +167,17 @@ implements LayerNode {
 				}				
 			}while(!ready);
 			logger.info("Listening "+super.getClass()+" on "+availablePort);
-			while(ready){
-				socket.receive(packet);
-				requestExecutor.execute(dispatcherClass.getConstructor(LayerNode.class,DatagramPacket.class).newInstance(this,packet));
-				buffer = new byte[MSG_LENGHT];
-				packet = new DatagramPacket(buffer, buffer.length);
-			}
+			do{
+				try{
+					socket.receive(packet);
+					logger.info("Message received for "+this.toString());
+					requestExecutor.execute(dispatcherClass.getConstructor(LayerNode.class,DatagramPacket.class).newInstance(this,packet));
+					buffer = new byte[MSG_LENGHT];
+					packet = new DatagramPacket(buffer, buffer.length);
+				}catch(SocketException e){
+					System.out.println("");
+				}
+			}while(ready);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -209,12 +228,22 @@ implements LayerNode {
 	public synchronized C openTcpConnection() throws Exception {
 		C conn = getAvailableTcpConnection();		
 		if(conn == null || conn.isBusy()){
-			conn = tcpConnectionClass.getConstructor(Class.class).newInstance(tcpDispatcherClass);
+			conn = tcpConnectionClass.getConstructor(LayerNode.class,Class.class).newInstance(this,tcpDispatcherClass);
 			logger.info("Opened TCP node "+conn.getClass()+" on "+conn.getPort());
-			requestExecutor.execute(conn);
+			tcpRequestExecutor.execute(conn);
 			TCP_CONN_MAP.get(tcpDispatcherClass).add(conn);
 		}
 		return conn;
+	}
+	
+	public void closeTcpConnection(int tcpPort) throws Exception{
+		//releasePort(tcpPort);
+		List<C> connections = TCP_CONN_MAP.get(tcpDispatcherClass);
+		for(C conn:connections){
+			if(conn.getPort() == tcpPort){
+				conn.release();
+			}
+		}
 	}
 
 	public synchronized int getPort(){

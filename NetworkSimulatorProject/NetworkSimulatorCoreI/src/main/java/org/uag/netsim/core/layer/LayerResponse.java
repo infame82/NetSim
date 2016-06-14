@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public interface LayerResponse extends Serializable{
 
-    public enum STATUS{INVALID_REQUEST,SUCCESS};
+    public enum STATUS{INVALID_REQUEST,SUCCESS,ERROR};
 
     STATUS getStatus();
 

@@ -51,6 +51,8 @@ public abstract class AbstractLayerRequestDispatcher<R extends LayerRequest<? ex
 		}else if(request.getPrimitive() == LayerRequest.PRIMITIVE.DISCOVER){
 			logger.debug("Discover request "+node.getClass()+" on "+node.getPort());
 			return new DefaultLayerNodeHandler(node.getHost(),node.getPort(),node.getActiveCount());
+		}else if(request.getPrimitive() == LayerRequest.PRIMITIVE.CLOSE_NODE){
+			
 		}
 		return resolveLayerOperation(request);
 	}

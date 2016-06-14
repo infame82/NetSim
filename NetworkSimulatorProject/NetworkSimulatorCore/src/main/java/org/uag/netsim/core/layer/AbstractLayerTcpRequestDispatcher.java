@@ -11,9 +11,11 @@ public abstract class AbstractLayerTcpRequestDispatcher<R extends LayerTcpReques
     protected Socket socket;
     protected ObjectInputStream in;
     protected ObjectOutputStream out;
+    protected LayerNode node;
 
-    public AbstractLayerTcpRequestDispatcher(Socket socket) throws IOException{
+    public AbstractLayerTcpRequestDispatcher(LayerNode node,Socket socket) throws IOException{
         this.socket = socket;
+        this.node = node;
         in = new ObjectInputStream(socket.getInputStream());
         out = new ObjectOutputStream(socket.getOutputStream());
     }
@@ -22,10 +24,16 @@ public abstract class AbstractLayerTcpRequestDispatcher<R extends LayerTcpReques
         try {
             resolveRequest(in.readObject());
         } catch (IOException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
+    }
+    
+    public void close() throws Exception{
+    	in.close();
+    	out.close();
+    	socket.close();
     }
 
 

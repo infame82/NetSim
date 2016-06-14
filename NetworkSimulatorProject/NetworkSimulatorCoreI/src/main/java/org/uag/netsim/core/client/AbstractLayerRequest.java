@@ -10,6 +10,8 @@ public abstract class AbstractLayerRequest<P extends Enum<P>> implements LayerRe
 	private static final long serialVersionUID = -7895536119482512132L;
 	
 	protected PRIMITIVE primitive;
+	protected String frame;
+	
 	@Override
 	public PRIMITIVE getPrimitive() {
 		return primitive;
@@ -19,5 +21,17 @@ public abstract class AbstractLayerRequest<P extends Enum<P>> implements LayerRe
 	public void setPrimitive(PRIMITIVE primitive) {
 		this.primitive = primitive;
 	}
+
+	public String getFrame() {
+		return frame;
+	}
+
+	public void setFrame(String frame) {
+		this.frame = frame;
+	}
+
+	
+	
+	
 
 }

@@ -37,7 +37,7 @@ public class AppLayerNodeTest extends AbstractTestNGSpringContextTests{
 	}
 	
 	@AfterClass
-	public void destroyTest(){
+	public void destroyTest() throws Exception{
 		appLayer_01.release();
 		//appLayer_02.release();
 	}
