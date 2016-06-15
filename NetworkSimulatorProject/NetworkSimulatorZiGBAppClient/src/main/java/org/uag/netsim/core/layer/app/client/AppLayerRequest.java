@@ -9,7 +9,7 @@ public class AppLayerRequest extends AbstractLayerRequest<AppLayerRequest.LAYER_
 	 */
 	private static final long serialVersionUID = 4034397124071314509L;
 	
-	public enum LAYER_PRIMITIVE{OP_1}
+	public enum LAYER_PRIMITIVE{APSDE_SAP_OPEN,APSDE_SAP_CLOSE,APSME_SAP_OPEN,APSME_SAP_CLOSE}
 	private LAYER_PRIMITIVE layerPrimitive;
 
 	public LAYER_PRIMITIVE getLayerPrimitive() {

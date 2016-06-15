@@ -15,6 +15,8 @@ public class AppLayerClientTest extends AbstractTestNGSpringContextTests{
 		
 	//	for(int i=0;i<3;i++)
 		AppLayerClient client = new AppLayerClient(new DefaultCoreLog());		
+		LayerTcpConnectionHandler h = client.openAPSDESAP();
+		client.closeAPSDESAP(h.getPort());
 		//LayerTcpConnectionHandler tcpHandler = client.requestTcpNode();
 		//assert appLayer_01.isReady() ;//&& appLayer_02.isReady();
 	}

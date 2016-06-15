@@ -1,9 +1,13 @@
 package org.uag.netsim.core.layer.app.client;
 
+import java.net.DatagramPacket;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.ICoreLog;
+import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.client.AbstractLayerClient;
+import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 
 @Component("appLayerClient")
 @Scope("prototype")
@@ -29,4 +33,37 @@ public class AppLayerClient extends AbstractLayerClient<AppLayerRequest>{
 		return MAX_PORT_RANGE;
 	}
 	
+	public LayerTcpConnectionHandler openAPSMESAP() throws Exception{
+		AppLayerRequest request = new AppLayerRequest();
+		request.setLayerPrimitive(AppLayerRequest.LAYER_PRIMITIVE.APSME_SAP_OPEN);
+		DatagramPacket response = sendRequest(request);
+		LayerTcpConnectionHandler tcpHandler = (LayerTcpConnectionHandler)ObjectSerializer.unserialize(response.getData());
+		return tcpHandler;
+	}
+	
+	public boolean closeAPSMESAP(int port) throws Exception{
+		AppLayerRequest request = new AppLayerRequest();
+		request.setLayerPrimitive(AppLayerRequest.LAYER_PRIMITIVE.APSME_SAP_CLOSE);
+		request.setFrame(""+port);
+		DatagramPacket response = sendRequest(request);
+		AppLayerResponse confirm = (AppLayerResponse)ObjectSerializer.unserialize(response.getData());
+		return (confirm.getStatus()== AppLayerResponse.STATUS.SUCCESS);
+	}
+	
+	public LayerTcpConnectionHandler openAPSDESAP() throws Exception{
+		AppLayerRequest request = new AppLayerRequest();
+		request.setLayerPrimitive(AppLayerRequest.LAYER_PRIMITIVE.APSDE_SAP_OPEN);
+		DatagramPacket response = sendRequest(request);
+		LayerTcpConnectionHandler tcpHandler = (LayerTcpConnectionHandler)ObjectSerializer.unserialize(response.getData());
+		return tcpHandler;
+	}
+	
+	public boolean closeAPSDESAP(int port) throws Exception{
+		AppLayerRequest request = new AppLayerRequest();
+		request.setLayerPrimitive(AppLayerRequest.LAYER_PRIMITIVE.APSDE_SAP_CLOSE);
+		request.setFrame(""+port);
+		DatagramPacket response = sendRequest(request);
+		AppLayerResponse confirm = (AppLayerResponse)ObjectSerializer.unserialize(response.getData());
+		return (confirm.getStatus()== AppLayerResponse.STATUS.SUCCESS);
+	}
 }
