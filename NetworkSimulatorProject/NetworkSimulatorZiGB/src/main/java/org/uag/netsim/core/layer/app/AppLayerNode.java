@@ -29,9 +29,9 @@ public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 ,DefaultLayerTcpConnection
 ,AppLayerClient> {
 
-	@Autowired
+	/*@Autowired
 	@Qualifier("networkLayerClient")
-	private NetworkLayerClient networkClient;
+	private NetworkLayerClient networkClient;*/
 	
 	public static int MAX_THREADS = 10;
 	private ThreadPoolExecutor apsdeRequestExecutor;

@@ -5,6 +5,8 @@ import java.net.Socket;
 
 import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
 import org.uag.netsim.core.layer.LayerNode;
+import org.uag.netsim.core.layer.LayerTcpResponse;
+import org.uag.netsim.core.layer.phy.PhyLayerNode;
 
 public class PLMERequestDispatcher 
 extends AbstractLayerTcpRequestDispatcher<PLMERequest,PLMEConfirm>{
@@ -15,7 +17,16 @@ extends AbstractLayerTcpRequestDispatcher<PLMERequest,PLMEConfirm>{
 
 	@Override
 	protected PLMEConfirm resolveRequest(PLMERequest request) {
-		// TODO Auto-generated method stub
-		return null;
+		PLMEConfirm confirm = new PLMEConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		PhyLayerNode node = (PhyLayerNode)super.node;
+		if( request.getPrimitive() == PLMERequest.PRIMITIVE.GET_CHANNELS ){
+			confirm.setChannels(node.getChannels());
+		}else if( request.getPrimitive() == PLMERequest.PRIMITIVE.INCREASE_ENERGY ){
+			if(node.increaseEnergyLevel(request.getChannel())){
+				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+			}
+		}
+		return confirm;
 	}
 }

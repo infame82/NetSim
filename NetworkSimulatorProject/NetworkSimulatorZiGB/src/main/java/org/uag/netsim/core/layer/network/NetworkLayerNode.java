@@ -30,9 +30,10 @@ public class NetworkLayerNode extends AbstractLayerNode<NetworkLayerRequestDispa
 	
 	public static int MAX_THREADS = 10;
 	
-	@Autowired
+	/*@Autowired
 	@Qualifier("macLayerClient")
-	private MacLayerClient macClient;
+	private MacLayerClient macClient;*/
+	
 	private ThreadPoolExecutor nlmeRequestExecutor;
 	private ThreadPoolExecutor nldeRequestExecutor;
 	public static int MIN_PORT_RANGE = 9200;

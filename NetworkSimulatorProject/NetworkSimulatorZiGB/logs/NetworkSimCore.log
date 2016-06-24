@@ -2441,3 +2441,1278 @@
 2016-06-14 21:10:45 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
 2016-06-14 21:10:45 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
 2016-06-14 21:10:45 INFO  Main:62 - Server stopped succesfully
+2016-06-22 19:38:53 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 19:38:53 CDT 2016]; root of context hierarchy
+2016-06-22 19:38:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 19:38:55 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 19:38:56 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 19:38:56 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 19:38:56 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@29955946
+2016-06-22 19:38:56 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@29955946
+2016-06-22 19:38:56 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 19:38:57 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 19:38:57 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 19:38:57 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 19:38:58 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 19:38:59 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 19:38:59 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 19:38:59 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@12037ffc
+2016-06-22 19:39:00 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 19:39:01 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 19:39:01 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 19:39:01 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@5469b38b
+2016-06-22 19:39:02 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 19:39:03 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 19:39:03 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 19:39:03 INFO  Main:53 - Server has started succesfully
+2016-06-22 19:40:09 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 19:40:09 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 19:40:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 19:40:10 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 19:40:10 CDT 2016]; root of context hierarchy
+2016-06-22 19:40:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 19:40:20 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 19:40:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 19:40:21 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 57524
+2016-06-22 19:41:16 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 19:40:10 CDT 2016]; root of context hierarchy
+2016-06-22 19:41:57 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 19:41:57 CDT 2016]; root of context hierarchy
+2016-06-22 19:41:57 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 19:41:59 ERROR Main:60 - Server has not started
+2016-06-22 19:42:03 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 19:42:03 CDT 2016]; root of context hierarchy
+2016-06-22 19:42:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 19:42:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 19:42:06 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 19:42:06 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 19:42:06 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 19:42:06 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 19:42:06 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 19:42:07 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 19:42:07 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 19:42:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:42:08 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 19:42:09 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 19:42:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 19:42:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@547d87a9
+2016-06-22 19:42:10 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 19:42:11 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 19:42:11 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 19:42:11 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@5181febd
+2016-06-22 19:42:12 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 19:42:13 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 19:42:13 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 19:42:13 INFO  Main:53 - Server has started succesfully
+2016-06-22 19:42:24 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 19:42:24 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 19:42:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 19:42:24 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 19:42:24 CDT 2016]; root of context hierarchy
+2016-06-22 19:42:25 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:42:32 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:42:33 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:42:33 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 57540
+2016-06-22 19:43:26 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 19:42:24 CDT 2016]; root of context hierarchy
+2016-06-22 19:43:46 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 19:43:46 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 19:43:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 19:43:46 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 19:43:46 CDT 2016]; root of context hierarchy
+2016-06-22 19:43:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:43:52 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:43:53 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@3dec4782
+2016-06-22 19:43:53 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 57550
+2016-06-22 19:43:53 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 19:43:46 CDT 2016]; root of context hierarchy
+2016-06-22 20:22:12 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:22:12 CDT 2016]; root of context hierarchy
+2016-06-22 20:22:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:22:14 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:22:15 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:22:15 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:22:15 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:22:15 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:22:15 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:22:16 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:22:16 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:22:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:22:17 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:22:18 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:22:18 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:22:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@1838c664
+2016-06-22 20:22:19 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:22:20 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:22:20 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:22:20 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@19bc0339
+2016-06-22 20:22:21 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:22:22 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:22:22 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:22:22 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:22:48 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:22:48 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 20:22:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:22:48 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 20:22:48 CDT 2016]; root of context hierarchy
+2016-06-22 20:22:48 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:22:59 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:23:00 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:23:00 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 57852
+2016-06-22 20:26:49 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:26:49 CDT 2016]; root of context hierarchy
+2016-06-22 20:26:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:26:51 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:26:52 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:26:52 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:26:52 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:26:52 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:26:52 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:26:53 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:26:53 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:26:53 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:26:54 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:26:55 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:26:55 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:26:55 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@f73b253
+2016-06-22 20:26:56 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:26:57 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:26:57 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:26:57 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@12a99523
+2016-06-22 20:26:58 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:26:59 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:26:59 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:26:59 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:27:06 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:27:06 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 20:27:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:27:07 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 20:27:07 CDT 2016]; root of context hierarchy
+2016-06-22 20:27:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:27:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:27:11 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:27:11 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 57878
+2016-06-22 20:27:34 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:27:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:30:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:30:14 CDT 2016]; root of context hierarchy
+2016-06-22 20:30:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:30:16 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:30:17 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:30:17 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:30:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:30:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:30:17 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:30:18 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:30:18 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:30:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:30:19 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:30:20 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:30:20 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:30:20 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@140ac85a
+2016-06-22 20:30:21 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:30:22 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:30:22 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:30:22 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@13245e0
+2016-06-22 20:30:23 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:30:24 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:30:24 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:30:24 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:32:28 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:32:28 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 20:32:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:32:29 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 20:32:29 CDT 2016]; root of context hierarchy
+2016-06-22 20:32:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:32:30 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:32:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:32:31 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58495
+2016-06-22 20:32:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:32:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:33:20 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:33:20 CDT 2016]; root of context hierarchy
+2016-06-22 20:33:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:33:22 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:33:23 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:33:23 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:33:23 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-22 20:33:23 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-22 20:33:23 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:33:24 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:33:24 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:33:24 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:33:25 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:33:26 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:33:26 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:33:26 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@7d3fbc6f
+2016-06-22 20:33:27 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:33:28 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:33:28 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:33:28 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@44869cd3
+2016-06-22 20:33:29 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:33:30 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:33:30 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:33:30 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:33:39 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:33:39 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 20:33:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:33:40 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 20:33:40 CDT 2016]; root of context hierarchy
+2016-06-22 20:33:40 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:33:41 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:33:42 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:33:42 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58506
+2016-06-22 20:34:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:34:11 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:35:16 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:35:16 CDT 2016]; root of context hierarchy
+2016-06-22 20:35:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:35:18 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:35:19 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:35:19 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:35:19 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@41fc4f99
+2016-06-22 20:35:19 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@41fc4f99
+2016-06-22 20:35:19 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:35:20 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:35:20 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:35:20 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:35:21 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:35:22 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:35:22 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:35:22 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@140ac85a
+2016-06-22 20:35:23 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:35:24 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:35:24 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:35:24 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@35179c21
+2016-06-22 20:35:25 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:35:26 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:35:26 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:35:26 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:35:30 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:35:30 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43dac38f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337]
+2016-06-22 20:35:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:35:30 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 20:35:30 CDT 2016]; root of context hierarchy
+2016-06-22 20:35:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:35:32 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:35:33 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:35:33 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58522
+2016-06-22 20:35:36 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:35:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:36:07 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@cecf639: startup date [Wed Jun 22 20:35:30 CDT 2016]; root of context hierarchy
+2016-06-22 20:36:13 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:36:13 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@37374a5e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4671e53b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2db7a79b]
+2016-06-22 20:36:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:36:14 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@76329302: startup date [Wed Jun 22 20:36:14 CDT 2016]; root of context hierarchy
+2016-06-22 20:36:14 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:36:15 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:36:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:36:16 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58530
+2016-06-22 20:36:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:36:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-22 20:36:21 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@76329302: startup date [Wed Jun 22 20:36:14 CDT 2016]; root of context hierarchy
+2016-06-22 20:36:28 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:36:28 CDT 2016]; root of context hierarchy
+2016-06-22 20:36:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:36:30 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:36:31 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:36:31 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:36:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-22 20:36:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-22 20:36:31 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:36:32 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:36:32 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:36:32 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:36:33 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:36:34 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:36:34 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:36:34 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@49ff57d
+2016-06-22 20:36:35 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:36:36 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:36:36 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:36:36 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@6a93275c
+2016-06-22 20:36:37 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:36:38 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:36:38 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:36:38 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:36:43 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:36:43 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@37374a5e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4671e53b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2db7a79b]
+2016-06-22 20:36:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:36:43 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@76329302: startup date [Wed Jun 22 20:36:43 CDT 2016]; root of context hierarchy
+2016-06-22 20:36:43 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:36:44 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:36:45 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:36:45 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58535
+2016-06-22 20:36:45 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:36:46 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:36:46 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@76329302: startup date [Wed Jun 22 20:36:43 CDT 2016]; root of context hierarchy
+2016-06-22 20:37:52 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:37:52 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@37374a5e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4671e53b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2db7a79b]
+2016-06-22 20:37:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:37:52 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@76329302: startup date [Wed Jun 22 20:37:52 CDT 2016]; root of context hierarchy
+2016-06-22 20:37:53 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:37:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:37:55 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:37:55 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58540
+2016-06-22 20:37:55 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:37:56 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:37:56 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@76329302: startup date [Wed Jun 22 20:37:52 CDT 2016]; root of context hierarchy
+2016-06-22 20:39:29 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:39:29 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-22 20:39:29 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:39:29 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Wed Jun 22 20:39:29 CDT 2016]; root of context hierarchy
+2016-06-22 20:39:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:30 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:31 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58547
+2016-06-22 20:39:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:32 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:32 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Wed Jun 22 20:39:29 CDT 2016]; root of context hierarchy
+2016-06-22 20:39:42 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:39:42 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-22 20:39:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:39:43 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Wed Jun 22 20:39:43 CDT 2016]; root of context hierarchy
+2016-06-22 20:39:43 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:44 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:45 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:45 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58552
+2016-06-22 20:39:45 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:46 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:39:46 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Wed Jun 22 20:39:43 CDT 2016]; root of context hierarchy
+2016-06-22 20:41:28 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-22 20:41:28 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-22 20:41:29 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:41:29 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Wed Jun 22 20:41:29 CDT 2016]; root of context hierarchy
+2016-06-22 20:41:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:41:30 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:41:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:41:31 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58559
+2016-06-22 20:41:31 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Wed Jun 22 20:41:29 CDT 2016]; root of context hierarchy
+2016-06-22 20:41:49 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:41:49 CDT 2016]; root of context hierarchy
+2016-06-22 20:41:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:41:50 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-22 20:41:50 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-22 20:41:50 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-22 20:41:50 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:41:50 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-22 20:41:50 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:41:50 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-22 20:41:50 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:41:50 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-22 20:41:50 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:41:50 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-22 20:41:50 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:41:50 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-22 20:41:50 INFO  Main:62 - Server stopped succesfully
+2016-06-22 20:42:24 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:42:24 CDT 2016]; root of context hierarchy
+2016-06-22 20:42:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:42:26 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:42:27 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:42:27 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:42:27 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:42:27 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:42:27 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:42:28 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:42:28 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:42:28 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:42:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:42:30 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-22 20:42:30 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58566
+2016-06-22 20:42:30 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:42:31 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:42:31 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:42:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@6430081d
+2016-06-22 20:42:32 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:42:33 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:42:33 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:42:33 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@44e9ab1c
+2016-06-22 20:42:34 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:42:35 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:42:35 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:42:35 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:42:41 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:42:41 CDT 2016]; root of context hierarchy
+2016-06-22 20:42:41 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:42:41 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:42:41 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:42:41 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:42:41 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:42:41 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-22 20:42:41 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:42:41 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-22 20:42:41 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:42:41 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-22 20:42:41 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:42:41 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-22 20:42:41 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:42:41 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-22 20:42:41 INFO  Main:62 - Server stopped succesfully
+2016-06-22 20:46:02 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:46:02 CDT 2016]; root of context hierarchy
+2016-06-22 20:46:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:46:04 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:46:05 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:46:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:46:05 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@24ea6b81
+2016-06-22 20:46:05 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@24ea6b81
+2016-06-22 20:46:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:46:06 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:46:06 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:46:06 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:46:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:46:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5dd2c157
+2016-06-22 20:46:08 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58614
+2016-06-22 20:46:08 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:46:09 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:46:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:46:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@6acc2289
+2016-06-22 20:46:10 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:46:11 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:46:11 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:46:11 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@55b90aff
+2016-06-22 20:46:12 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:46:13 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:46:13 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:46:13 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:49:12 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:49:12 CDT 2016]; root of context hierarchy
+2016-06-22 20:49:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:49:13 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@24ea6b81
+2016-06-22 20:49:13 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@24ea6b81
+2016-06-22 20:49:13 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@24ea6b81
+2016-06-22 20:49:13 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:49:13 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-22 20:49:13 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:49:13 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-22 20:49:13 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:49:13 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-22 20:49:13 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:49:13 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-22 20:49:13 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:49:13 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-22 20:49:13 INFO  Main:62 - Server stopped succesfully
+2016-06-22 20:49:33 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:49:33 CDT 2016]; root of context hierarchy
+2016-06-22 20:49:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:49:35 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:49:36 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:49:36 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:49:36 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:49:36 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:49:36 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:49:37 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:49:37 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:49:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:49:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:49:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4eec6c4e
+2016-06-22 20:49:39 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58629
+2016-06-22 20:49:39 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:49:40 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:49:40 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:49:40 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@3bd44654
+2016-06-22 20:49:41 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:49:42 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:49:42 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:49:42 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@4ab5c938
+2016-06-22 20:49:43 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:49:44 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:49:44 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:49:44 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:51:20 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:51:20 CDT 2016]; root of context hierarchy
+2016-06-22 20:51:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:51:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:51:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:51:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@74debfd6
+2016-06-22 20:51:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:51:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-22 20:51:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:51:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-22 20:51:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:51:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-22 20:51:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:51:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-22 20:51:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:51:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-22 20:51:21 INFO  Main:62 - Server stopped succesfully
+2016-06-22 20:51:32 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:51:32 CDT 2016]; root of context hierarchy
+2016-06-22 20:51:32 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:51:34 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:51:35 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:51:35 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:51:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-22 20:51:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-22 20:51:35 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:51:36 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:51:36 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:51:36 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4bdbaeb2
+2016-06-22 20:51:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4bdbaeb2
+2016-06-22 20:51:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4bdbaeb2
+2016-06-22 20:51:38 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58635
+2016-06-22 20:51:38 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:51:39 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:51:39 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:51:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@2481647a
+2016-06-22 20:51:40 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:51:41 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:51:41 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:51:41 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@378eaf11
+2016-06-22 20:51:48 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:51:48 CDT 2016]; root of context hierarchy
+2016-06-22 20:51:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:51:49 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:51:50 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:51:50 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:51:50 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:51:50 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:51:50 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:51:51 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:51:51 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:51:51 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:51:53 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:51:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-22 20:51:54 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58638
+2016-06-22 20:51:54 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:51:55 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:51:55 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:51:55 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@42fa78aa
+2016-06-22 20:51:56 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-22 20:51:57 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-22 20:51:57 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:51:57 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@74a270b8
+2016-06-22 20:51:58 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-22 20:51:59 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-22 20:51:59 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:51:59 INFO  Main:53 - Server has started succesfully
+2016-06-22 20:52:33 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Wed Jun 22 20:52:33 CDT 2016]; root of context hierarchy
+2016-06-22 20:52:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:52:34 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:52:34 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:52:34 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-22 20:52:34 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-22 20:52:34 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-22 20:52:34 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-22 20:52:34 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-22 20:52:34 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:52:34 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-22 20:52:34 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:52:34 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-22 20:52:34 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:52:34 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-22 20:52:34 INFO  Main:62 - Server stopped succesfully
+2016-06-22 20:53:10 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:53:10 CDT 2016]; root of context hierarchy
+2016-06-22 20:53:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:53:11 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:53:12 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:53:12 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:53:12 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:53:12 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5db6d08b
+2016-06-22 20:53:30 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-22 20:53:31 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-22 20:53:31 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-22 20:53:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@35d219fb
+2016-06-22 20:53:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@35d219fb
+2016-06-22 20:53:40 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@35d219fb
+2016-06-22 20:53:40 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 58646
+2016-06-22 20:53:40 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-22 20:53:41 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-22 20:53:41 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-22 20:54:08 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Wed Jun 22 20:54:08 CDT 2016]; root of context hierarchy
+2016-06-22 20:54:08 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-22 20:54:10 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-22 20:54:11 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-22 20:54:11 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-22 20:54:11 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-22 20:54:11 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-23 00:10:21 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-23 00:10:21 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-23 00:10:21 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:33:01 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:33:01 CDT 2016]; root of context hierarchy
+2016-06-24 12:33:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:33:03 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:33:04 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:33:04 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:33:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 12:33:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 12:33:04 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:33:05 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:33:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:33:05 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@30b92fb4
+2016-06-24 12:33:06 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@30b92fb4
+2016-06-24 12:33:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@30b92fb4
+2016-06-24 12:33:07 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53339
+2016-06-24 12:33:07 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:33:08 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:33:08 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:33:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@68e8df6d
+2016-06-24 12:33:09 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:33:10 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:33:10 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:33:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@6ae77b75
+2016-06-24 12:33:11 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:33:12 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:33:12 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:33:12 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:33:17 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:33:17 CDT 2016]; root of context hierarchy
+2016-06-24 12:33:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:33:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 12:33:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 12:33:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 12:33:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:33:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 12:33:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:33:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 12:33:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:33:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 12:33:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:33:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 12:33:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:33:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 12:33:18 INFO  Main:62 - Server stopped succesfully
+2016-06-24 12:33:26 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 12:33:26 CDT 2016]; root of context hierarchy
+2016-06-24 12:33:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:33:28 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:33:29 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:33:29 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:33:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 12:33:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 12:33:33 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:33:35 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:33:35 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:33:42 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@1a8c58c3
+2016-06-24 12:33:43 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@1a8c58c3
+2016-06-24 12:33:44 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@1a8c58c3
+2016-06-24 12:33:44 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53350
+2016-06-24 12:33:44 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:33:45 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:33:45 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:34:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 12:34:14 CDT 2016]; root of context hierarchy
+2016-06-24 12:34:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:34:15 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:34:16 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:34:16 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:34:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 12:34:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 12:34:25 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:34:26 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:34:26 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:34:36 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@58c3ed69
+2016-06-24 12:34:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@58c3ed69
+2016-06-24 12:34:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@58c3ed69
+2016-06-24 12:34:38 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53354
+2016-06-24 12:34:38 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:34:39 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:34:39 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:34:59 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@12b63e19
+2016-06-24 12:35:00 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:35:01 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:35:01 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:35:01 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@4628861
+2016-06-24 12:35:02 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:35:03 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:35:03 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:35:03 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:35:20 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:35:20 CDT 2016]; root of context hierarchy
+2016-06-24 12:35:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:35:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 12:35:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 12:35:21 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 12:35:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:35:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 12:35:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:35:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 12:35:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:35:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 12:35:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:35:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 12:35:21 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:35:21 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 12:35:21 INFO  Main:62 - Server stopped succesfully
+2016-06-24 12:40:27 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 12:40:27 CDT 2016]; root of context hierarchy
+2016-06-24 12:40:27 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:40:28 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:40:29 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:40:29 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:40:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 12:40:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 12:40:34 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:40:35 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:40:35 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:40:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@35d219fb
+2016-06-24 12:40:40 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@35d219fb
+2016-06-24 12:40:41 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@35d219fb
+2016-06-24 12:40:41 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53738
+2016-06-24 12:40:41 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:40:42 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:40:42 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:40:45 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@299a9bcc
+2016-06-24 12:40:46 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:40:47 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:40:47 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:40:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@378eaf11
+2016-06-24 12:40:48 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:40:49 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:40:49 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:40:49 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:41:07 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 12:41:07 CDT 2016]; root of context hierarchy
+2016-06-24 12:41:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:41:08 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:41:09 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:41:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:41:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@2df2b88a
+2016-06-24 12:41:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@2df2b88a
+2016-06-24 12:41:09 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:41:11 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:41:11 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:41:12 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-24 12:41:13 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-24 12:41:14 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5c7c76d8
+2016-06-24 12:41:14 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53745
+2016-06-24 12:41:14 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:41:15 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:41:15 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:41:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@2f7c0a79
+2016-06-24 12:41:18 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:41:19 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:41:19 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:41:19 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@2a4b1f63
+2016-06-24 12:41:20 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:41:21 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:41:21 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:41:21 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:41:23 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:41:23 CDT 2016]; root of context hierarchy
+2016-06-24 12:41:23 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:41:24 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@2df2b88a
+2016-06-24 12:41:24 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@2df2b88a
+2016-06-24 12:41:24 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@2df2b88a
+2016-06-24 12:41:24 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:41:24 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 12:41:24 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:41:24 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 12:41:24 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:41:24 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 12:41:24 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:41:24 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 12:41:24 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:41:24 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 12:41:24 INFO  Main:62 - Server stopped succesfully
+2016-06-24 12:42:13 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 12:42:13 CDT 2016]; root of context hierarchy
+2016-06-24 12:42:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:42:15 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:42:16 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:42:16 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:42:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@416913e2
+2016-06-24 12:42:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@416913e2
+2016-06-24 12:42:16 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:42:17 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:42:17 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:42:17 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:42:18 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:42:18 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:42:25 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@6e71f70
+2016-06-24 12:42:26 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:42:27 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:42:27 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:42:27 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.network.NetworkLayerNode@680ec8a2
+2016-06-24 12:42:28 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:42:29 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:42:29 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:42:29 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:42:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:42:34 CDT 2016]; root of context hierarchy
+2016-06-24 12:42:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:42:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@416913e2
+2016-06-24 12:42:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@416913e2
+2016-06-24 12:42:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@416913e2
+2016-06-24 12:42:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:42:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 12:42:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:42:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 12:42:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:42:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 12:42:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:42:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 12:42:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:42:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 12:42:35 INFO  Main:62 - Server stopped succesfully
+2016-06-24 12:50:57 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 12:50:57 CDT 2016]; root of context hierarchy
+2016-06-24 12:50:57 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:50:59 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:51:00 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:51:00 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:51:00 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 12:51:00 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 12:51:00 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:51:01 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:51:01 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:51:01 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:51:02 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:51:02 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:51:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:51:06 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:51:06 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:51:06 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:51:07 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:51:07 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:51:07 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:51:13 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:51:13 CDT 2016]; root of context hierarchy
+2016-06-24 12:51:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:51:14 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 12:51:14 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 12:51:14 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 12:51:14 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:51:14 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 12:51:14 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:51:14 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 12:51:14 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:51:14 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 12:51:14 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:51:14 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 12:51:14 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:51:14 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 12:51:14 INFO  Main:62 - Server stopped succesfully
+2016-06-24 12:56:07 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:56:07 CDT 2016]; root of context hierarchy
+2016-06-24 12:56:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:56:08 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:56:08 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:56:08 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:56:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@349ee081
+2016-06-24 12:56:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@349ee081
+2016-06-24 12:56:08 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:56:08 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:56:08 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:56:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@ef6ba75
+2016-06-24 12:56:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@ef6ba75
+2016-06-24 12:56:09 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53877
+2016-06-24 12:56:09 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:56:09 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:56:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:56:09 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:56:09 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:56:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:56:09 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:56:09 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:56:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:56:09 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:56:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:56:34 CDT 2016]; root of context hierarchy
+2016-06-24 12:56:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:56:34 ERROR Main:60 - Server has not started
+2016-06-24 12:57:04 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:57:04 CDT 2016]; root of context hierarchy
+2016-06-24 12:57:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:57:04 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:57:04 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:57:04 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:57:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@69ff1e9c
+2016-06-24 12:57:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@69ff1e9c
+2016-06-24 12:57:04 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:57:04 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:57:04 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:57:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@9b29df6
+2016-06-24 12:57:05 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@9b29df6
+2016-06-24 12:57:05 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53881
+2016-06-24 12:57:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:57:05 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:57:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:57:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:57:05 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:57:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:57:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:57:05 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:57:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:57:05 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:57:10 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:57:10 CDT 2016]; root of context hierarchy
+2016-06-24 12:57:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:57:10 ERROR Main:60 - Server has not started
+2016-06-24 12:57:22 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:57:22 CDT 2016]; root of context hierarchy
+2016-06-24 12:57:22 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:57:24 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 12:57:25 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 12:57:25 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:57:25 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 12:57:25 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 12:57:25 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 12:57:26 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 12:57:26 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:57:26 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5e56a62f
+2016-06-24 12:57:27 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5e56a62f
+2016-06-24 12:57:28 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5e56a62f
+2016-06-24 12:57:28 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53882
+2016-06-24 12:57:28 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 12:57:29 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 12:57:29 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:57:29 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 12:57:30 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 12:57:30 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:57:30 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 12:57:31 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 12:57:31 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:57:31 INFO  Main:53 - Server has started succesfully
+2016-06-24 12:57:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 12:57:34 CDT 2016]; root of context hierarchy
+2016-06-24 12:57:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 12:57:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 12:57:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 12:57:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 12:57:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 12:57:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 12:57:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 12:57:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 12:57:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 12:57:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 12:57:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 12:57:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 12:57:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 12:57:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 12:57:35 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:00:51 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:00:51 CDT 2016]; root of context hierarchy
+2016-06-24 13:00:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:00:53 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:00:54 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:00:54 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:00:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 13:00:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 13:00:54 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:00:55 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:00:55 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:00:55 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:00:56 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:00:56 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:01:02 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@8565899
+2016-06-24 13:01:03 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:01:04 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:01:04 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:01:04 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:01:05 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:01:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:01:05 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:01:15 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:01:15 CDT 2016]; root of context hierarchy
+2016-06-24 13:01:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:01:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 13:01:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 13:01:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@4847b35
+2016-06-24 13:01:16 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:01:16 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:01:16 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:01:16 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:01:16 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:01:16 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:01:16 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:01:16 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:01:16 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:01:16 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:01:16 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:06:45 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:06:45 CDT 2016]; root of context hierarchy
+2016-06-24 13:06:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:06:46 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:06:47 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:06:47 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:06:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:06:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:06:47 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:06:48 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:06:48 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:06:48 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@4e1f672c
+2016-06-24 13:06:50 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:06:51 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:06:51 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:06:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.mac.MacLayerNode@f4b62b6
+2016-06-24 13:06:55 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:06:56 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:06:56 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:06:56 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:06:57 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:06:57 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:06:57 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:07:01 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:07:01 CDT 2016]; root of context hierarchy
+2016-06-24 13:07:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:07:02 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:07:02 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:07:02 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:07:02 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:07:02 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:07:02 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:07:02 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:07:02 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:07:02 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:07:02 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:07:02 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:07:02 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:07:02 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:07:02 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:07:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:07:34 CDT 2016]; root of context hierarchy
+2016-06-24 13:07:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:07:36 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:07:37 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:07:37 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:07:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5bc25a74
+2016-06-24 13:07:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5bc25a74
+2016-06-24 13:07:37 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:07:38 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:07:38 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:07:38 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:07:39 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:07:39 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:07:39 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:07:40 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:07:40 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:07:40 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:07:41 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:07:41 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:07:41 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:07:47 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:07:47 CDT 2016]; root of context hierarchy
+2016-06-24 13:07:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:07:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5bc25a74
+2016-06-24 13:07:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5bc25a74
+2016-06-24 13:07:47 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@5bc25a74
+2016-06-24 13:07:47 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:07:47 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:07:47 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:07:47 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:07:47 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:07:47 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:07:47 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:07:47 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:07:47 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:07:47 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:07:47 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:07:55 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:07:55 CDT 2016]; root of context hierarchy
+2016-06-24 13:07:55 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:07:57 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:07:58 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:07:58 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:07:58 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 13:07:58 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 13:07:58 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:07:59 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:07:59 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:07:59 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:08:00 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:08:00 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:08:00 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:08:01 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:08:01 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:08:01 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:08:02 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:08:02 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:08:02 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:08:06 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:08:06 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-24 13:08:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:08:07 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:08:07 CDT 2016]; root of context hierarchy
+2016-06-24 13:08:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:08:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:08:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:08:09 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 53978
+2016-06-24 13:08:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:08:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:08:10 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:08:07 CDT 2016]; root of context hierarchy
+2016-06-24 13:18:08 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:18:08 CDT 2016]; root of context hierarchy
+2016-06-24 13:18:08 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:18:09 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 13:18:09 ERROR Main:46 - Server nodes already started
+2016-06-24 13:18:28 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:18:28 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-24 13:18:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:18:29 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:18:28 CDT 2016]; root of context hierarchy
+2016-06-24 13:18:29 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:18:30 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:18:31 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@286dabf0
+2016-06-24 13:18:31 INFO  PhyLayerNode:127 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 54078
+2016-06-24 13:18:31 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:18:28 CDT 2016]; root of context hierarchy
+2016-06-24 13:18:38 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:18:38 CDT 2016]; root of context hierarchy
+2016-06-24 13:18:38 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:18:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 13:18:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 13:18:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1621c4fd
+2016-06-24 13:18:39 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:18:39 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:18:39 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:18:39 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:18:39 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:18:39 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:18:39 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:18:39 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:18:39 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:18:39 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:18:39 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:18:51 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:18:51 CDT 2016]; root of context hierarchy
+2016-06-24 13:18:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:18:53 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:18:54 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:18:54 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:18:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:18:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:18:54 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:18:55 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:18:55 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:18:55 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:18:56 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:18:56 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:19:00 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:19:01 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:19:01 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:19:01 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:19:02 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:19:02 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:19:02 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:19:09 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:19:09 CDT 2016]; root of context hierarchy
+2016-06-24 13:19:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:19:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:19:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:19:10 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@13736ae9
+2016-06-24 13:19:10 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:19:10 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:19:10 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:19:10 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:19:10 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:19:10 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:19:10 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:19:10 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:19:10 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:19:10 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:19:10 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:19:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@31a5c39e: startup date [Fri Jun 24 13:19:14 CDT 2016]; root of context hierarchy
+2016-06-24 13:19:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:19:16 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:19:17 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:19:17 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:19:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 13:19:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 13:19:17 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:19:18 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:19:18 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:19:18 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:19:19 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:19:19 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:19:22 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:19:23 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:19:23 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:19:23 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:19:24 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:19:24 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:19:24 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:19:36 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:19:36 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-24 13:19:36 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:19:36 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:19:36 CDT 2016]; root of context hierarchy
+2016-06-24 13:19:37 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-24 13:19:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-24 13:19:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5da5f685
+2016-06-24 13:19:39 INFO  PhyLayerNode:125 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 54092
+2016-06-24 13:19:39 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:19:36 CDT 2016]; root of context hierarchy
+2016-06-24 13:20:07 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:20:07 CDT 2016]; root of context hierarchy
+2016-06-24 13:20:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:20:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 13:20:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 13:20:07 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@b806f38
+2016-06-24 13:20:07 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:20:07 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:20:07 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:20:07 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:20:07 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:20:07 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:20:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:20:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:20:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:20:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:20:48 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:33:20 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:33:20 CDT 2016]; root of context hierarchy
+2016-06-24 13:33:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:33:22 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:33:23 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:33:23 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:33:23 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-24 13:33:23 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-24 13:33:23 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:33:24 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:33:24 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:33:24 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:33:25 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:33:25 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:33:25 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:33:26 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:33:26 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:33:26 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:33:27 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:33:27 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:33:27 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:33:38 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:33:38 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-24 13:33:38 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:33:38 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:33:38 CDT 2016]; root of context hierarchy
+2016-06-24 13:33:38 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@19f79064
+2016-06-24 13:33:39 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@19f79064
+2016-06-24 13:33:40 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@19f79064
+2016-06-24 13:33:40 INFO  PhyLayerNode:125 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 54210
+2016-06-24 13:33:40 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:33:38 CDT 2016]; root of context hierarchy
+2016-06-24 13:33:48 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:33:48 CDT 2016]; root of context hierarchy
+2016-06-24 13:33:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:33:48 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-24 13:33:48 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-24 13:33:48 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@713880b8
+2016-06-24 13:33:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:33:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:33:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:33:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:33:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:33:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:33:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:33:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:33:48 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:33:48 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:33:48 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:34:02 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:34:02 CDT 2016]; root of context hierarchy
+2016-06-24 13:34:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:34:03 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:34:04 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:34:04 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:34:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 13:34:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 13:34:04 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:34:05 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:34:05 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:34:05 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:34:06 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:34:06 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:34:06 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:34:07 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:34:07 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:34:07 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:34:08 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:34:08 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:34:08 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:34:15 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:34:15 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-24 13:34:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:34:15 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:34:15 CDT 2016]; root of context hierarchy
+2016-06-24 13:34:15 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@33e3ee25
+2016-06-24 13:34:16 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@33e3ee25
+2016-06-24 13:34:17 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@33e3ee25
+2016-06-24 13:34:17 INFO  PhyLayerNode:125 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 54217
+2016-06-24 13:34:18 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:34:15 CDT 2016]; root of context hierarchy
+2016-06-24 13:47:03 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:47:03 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2ed2d9cb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d5b810e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@43dac38f]
+2016-06-24 13:47:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:47:03 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@5386659f: startup date [Fri Jun 24 13:47:03 CDT 2016]; root of context hierarchy
+2016-06-24 13:47:04 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@33e3ee25
+2016-06-24 13:47:05 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@33e3ee25
+2016-06-24 13:47:06 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@33e3ee25
+2016-06-24 13:47:06 INFO  PhyLayerNode:125 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 54361
+2016-06-24 13:47:28 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@5386659f: startup date [Fri Jun 24 13:47:03 CDT 2016]; root of context hierarchy
+2016-06-24 13:47:35 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:47:35 CDT 2016]; root of context hierarchy
+2016-06-24 13:47:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:47:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 13:47:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 13:47:35 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@8e8cc7e
+2016-06-24 13:47:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:47:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-06-24 13:47:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:47:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-06-24 13:47:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:47:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-06-24 13:47:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:47:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-06-24 13:47:35 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:47:35 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-06-24 13:47:35 INFO  Main:62 - Server stopped succesfully
+2016-06-24 13:47:40 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Fri Jun 24 13:47:40 CDT 2016]; root of context hierarchy
+2016-06-24 13:47:40 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:47:41 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-06-24 13:47:42 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-06-24 13:47:42 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-06-24 13:47:42 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@41fc4f99
+2016-06-24 13:47:42 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@41fc4f99
+2016-06-24 13:47:42 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-06-24 13:47:43 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-06-24 13:47:43 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-06-24 13:47:43 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-06-24 13:47:44 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-06-24 13:47:44 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-06-24 13:47:44 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-06-24 13:47:45 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-06-24 13:47:45 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-06-24 13:47:45 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-06-24 13:47:46 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-06-24 13:47:46 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-06-24 13:47:46 INFO  Main:53 - Server has started succesfully
+2016-06-24 13:47:53 INFO  DefaultTestContextBootstrapper:207 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-06-24 13:47:53 INFO  DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8646db9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@37374a5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4671e53b]
+2016-06-24 13:47:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-06-24 13:47:54 INFO  GenericApplicationContext:578 - Refreshing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:47:54 CDT 2016]; root of context hierarchy
+2016-06-24 13:47:54 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5378ad93
+2016-06-24 13:47:55 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5378ad93
+2016-06-24 13:47:56 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.core.layer.phy.PhyLayerNode@5378ad93
+2016-06-24 13:47:56 INFO  PhyLayerNode:125 - Opened PLME SAP class org.uag.netsim.core.layer.DefaultLayerTcpConnection on 54368
+2016-06-24 13:47:56 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@71a794e5: startup date [Fri Jun 24 13:47:54 CDT 2016]; root of context hierarchy

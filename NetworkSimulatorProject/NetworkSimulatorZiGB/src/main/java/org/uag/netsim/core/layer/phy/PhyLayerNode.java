@@ -14,8 +14,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
-import org.uag.netsim.core.layer.network.NLDE.NLDERequestDispatcher;
-import org.uag.netsim.core.layer.network.NLME.NLMERequestDispatcher;
+import org.uag.netsim.core.layer.phy.RFChannel.RF_CHANNEL;
 import org.uag.netsim.core.layer.phy.PD.PDRequestDispatcher;
 import org.uag.netsim.core.layer.phy.PLME.PLMERequestDispatcher;
 
@@ -25,7 +24,9 @@ import org.uag.netsim.core.layer.phy.PLME.PLMERequestDispatcher;
 public class PhyLayerNode extends AbstractLayerNode<PhyLayerRequestDispatcher
 ,PhyLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,PhyLayerClient> {
+,PhyLayerClient> implements PhyLayerOperations{
+	
+	private List<RFChannel> channels;
 	
 	private ThreadPoolExecutor pdRequestExecutor;
 	private ThreadPoolExecutor plmeRequestExecutor;
@@ -45,32 +46,63 @@ public class PhyLayerNode extends AbstractLayerNode<PhyLayerRequestDispatcher
 		PLME_CONN_MAP.put(PLMERequestDispatcher.class,new ArrayList<DefaultLayerTcpConnection>());
 	}
 
-	
-
-	
 	@PostConstruct
 	public void construct() throws Exception{
+		channels = new ArrayList<RFChannel>();
+		channels.add(new RFChannel(RF_CHANNEL.CH_11));
+		channels.add(new RFChannel(RF_CHANNEL.CH_12));
+		channels.add(new RFChannel(RF_CHANNEL.CH_13));
+		channels.add(new RFChannel(RF_CHANNEL.CH_14));
+		channels.add(new RFChannel(RF_CHANNEL.CH_15));
+		channels.add(new RFChannel(RF_CHANNEL.CH_16));
+		channels.add(new RFChannel(RF_CHANNEL.CH_17));
+		channels.add(new RFChannel(RF_CHANNEL.CH_18));
+		channels.add(new RFChannel(RF_CHANNEL.CH_19));
+		channels.add(new RFChannel(RF_CHANNEL.CH_20));
+		channels.add(new RFChannel(RF_CHANNEL.CH_21));
+		channels.add(new RFChannel(RF_CHANNEL.CH_22));
+		channels.add(new RFChannel(RF_CHANNEL.CH_23));
+		channels.add(new RFChannel(RF_CHANNEL.CH_24));
+		
 		pdRequestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(MAX_THREADS);
 		plmeRequestExecutor = (ThreadPoolExecutor) Executors
 				.newFixedThreadPool(MAX_THREADS);
 		minPortRange = MIN_PORT_RANGE;
 		maxPortRange = MAX_PORT_RANGE;
-		super.init();
-		
+		super.init();		
+	}
+	
+	private RFChannel getChannel(RF_CHANNEL channelNumber) {
+		for(RFChannel channel:channels) {
+			if(channel.getChannel()== channelNumber) {
+				return channel;
+			}
+		}
+		return null;
+	}
+	
+	public synchronized List<RFChannel> getChannels() {
+		return channels;
+	}
+	
+	public synchronized boolean increaseEnergyLevel(RF_CHANNEL channel) {
+		RFChannel ch = getChannel(channel);
+		ch.setEnergy(ch.getEnergy()+1);
+		return true;
 	}
 	
 	public void release() throws Exception{		
-		List<DefaultLayerTcpConnection> nldeConnections = PD_CONN_MAP.get(NLDERequestDispatcher.class);
-		if(nldeConnections!=null){
-			for(DefaultLayerTcpConnection conn:nldeConnections){
+		List<DefaultLayerTcpConnection> pdConnections = PD_CONN_MAP.get(PDRequestDispatcher.class);
+		if(pdConnections!=null){
+			for(DefaultLayerTcpConnection conn:pdConnections){
 				conn.release();
 			}
 		}
 		pdRequestExecutor.shutdown();
-		List<DefaultLayerTcpConnection> nlmeConnections = PLME_CONN_MAP.get(NLMERequestDispatcher.class);
-		if(nlmeConnections!=null){
-			for(DefaultLayerTcpConnection conn:nlmeConnections){
+		List<DefaultLayerTcpConnection> plmeConnections = PLME_CONN_MAP.get(PLMERequestDispatcher.class);
+		if(plmeConnections!=null){
+			for(DefaultLayerTcpConnection conn:plmeConnections){
 				conn.release();
 			}
 		}

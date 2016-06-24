@@ -10,7 +10,7 @@ public class PhyLayerTcpRequest implements LayerTcpRequest<PhyLayerTcpRequest.PR
 	private static final long serialVersionUID = 2613467303373155759L;
 
 
-	public enum PRIMITIVE{OP_1}
+	public enum PRIMITIVE{PD_SAP_OPEN,PD_SAP_CLOSE,PLME_SAP_OPEN,PLME_SAP_CLOSE}
 
     private PRIMITIVE primitive;
 

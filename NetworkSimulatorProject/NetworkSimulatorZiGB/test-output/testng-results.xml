@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18197" started-at="2016-06-14T02:18:49Z" finished-at="2016-06-14T02:19:08Z">
+  <suite name="Default suite" duration-ms="2642" started-at="2016-06-24T18:47:53Z" finished-at="2016-06-24T18:47:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18197" started-at="2016-06-14T02:18:49Z" finished-at="2016-06-14T02:19:08Z">
+    <test name="Default test" duration-ms="2642" started-at="2016-06-24T18:47:53Z" finished-at="2016-06-24T18:47:56Z">
       <class name="org.uag.netsim.core.layer.phy.PhyLayerNodeTest">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="12" started-at="2016-06-13T21:18:49Z" finished-at="2016-06-13T21:18:49Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="18" started-at="2016-06-24T13:47:53Z" finished-at="2016-06-24T13:47:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="567" started-at="2016-06-13T21:18:49Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2016-06-13T21:18:50Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="2570" started-at="2016-06-24T13:47:53Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2016-06-24T13:47:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-06-13T21:18:50Z" finished-at="2016-06-13T21:18:50Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void org.uag.netsim.core.layer.phy.PhyLayerNodeTest.increaseEnergyLevelTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="initTest" is-config="true" duration-ms="0" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="increaseEnergyLevelTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="increaseEnergyLevelTest" duration-ms="14" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- increaseEnergyLevelTest -->
+        <test-method status="PASS" signature="destroyTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="destroyTest" is-config="true" duration-ms="1" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroyTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void org.uag.netsim.core.layer.phy.PhyLayerNodeTest.increaseEnergyLevelTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
           <params>
             <param index="0">
               <value>
@@ -26,15 +60,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="initTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="initTest" is-config="true" duration-ms="0" started-at="2016-06-13T21:18:50Z" finished-at="2016-06-13T21:18:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initTest -->
-        <test-method status="PASS" signature="test()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="test" duration-ms="17594" started-at="2016-06-13T21:18:50Z" finished-at="2016-06-13T21:19:08Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="test" duration-ms="10" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-06-13T21:19:08Z" finished-at="2016-06-13T21:19:08Z">
+        <test-method status="PASS" signature="initTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="initTest" is-config="true" duration-ms="0" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="destroyTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="destroyTest" is-config="true" duration-ms="1" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroyTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
           <params>
             <param index="0">
               <value>
@@ -45,11 +83,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="destroyTest()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="destroyTest" is-config="true" duration-ms="0" started-at="2016-06-13T21:19:08Z" finished-at="2016-06-13T21:19:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- destroyTest -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@29215f06]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2016-06-13T21:19:08Z" finished-at="2016-06-13T21:19:08Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:org.uag.netsim.core.layer.phy.PhyLayerNodeTest@10dba097]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2016-06-24T13:47:56Z" finished-at="2016-06-24T13:47:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->

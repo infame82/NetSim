@@ -29,9 +29,9 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 ,DefaultLayerTcpConnection
 ,MacLayerClient> {
 
-	@Autowired
+	/*@Autowired
 	@Qualifier("phyLayerClient")
-	private PhyLayerClient phyClient;
+	private PhyLayerClient phyClient;*/
 	
 	public static int MAX_THREADS = 10;
 	private ThreadPoolExecutor mcpsRequestExecutor;

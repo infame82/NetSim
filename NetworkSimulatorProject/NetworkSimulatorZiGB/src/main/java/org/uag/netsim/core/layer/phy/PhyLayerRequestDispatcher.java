@@ -34,7 +34,7 @@ public class PhyLayerRequestDispatcher extends AbstractLayerRequestDispatcher<Ph
 			LayerTcpConnection tcpConnection = node.openPLMESAP();
 			return new DefaultLayerTcpConnectionHandler(tcpConnection.getHost(),tcpConnection.getPort(),tcpConnection.getActiveCount());
 		}else if(request.getLayerPrimitive() == PhyLayerRequest.LAYER_PRIMITIVE.PLME_SAP_CLOSE){
-			int port = Integer.getInteger(request.getFrame());
+			int port = Integer.parseInt(request.getFrame());
 			if(node.closePLMESAP(port)){
 				response.setStatus(PhyLayerResponse.STATUS.SUCCESS);
 			}
