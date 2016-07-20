@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.uag.netsim.core.layer.phy.RFChannel.RF_CHANNEL;
 
-public interface PhyLayerOperations {
+public interface PhyLayerPLMEOperations {
 
 	boolean increaseEnergyLevel(RF_CHANNEL channel);
 	

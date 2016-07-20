@@ -20,7 +20,7 @@ import org.uag.netsim.core.layer.phy.PLME.PLMERequest;
 @Component("phyLayerClient")
 @Scope("prototype")
 public class PhyLayerClient extends AbstractLayerClient<PhyLayerRequest>
-implements PhyLayerOperations{
+implements PhyLayerPLMEOperations{
 	
 	private LayerTcpConnectionHandler plmeSAPHandler;
 

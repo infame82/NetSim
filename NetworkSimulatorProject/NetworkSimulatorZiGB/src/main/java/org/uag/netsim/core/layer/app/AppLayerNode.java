@@ -10,16 +10,15 @@ import java.util.concurrent.ThreadPoolExecutor;
 import javax.annotation.PostConstruct;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.uag.netsim.core.device.Beacon;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
 import org.uag.netsim.core.layer.APSME.APSMERequestDispatcher;
 import org.uag.netsim.core.layer.app.APSDE.APSDERequestDispatcher;
+import org.uag.netsim.core.layer.app.client.AppLayerAPSMEOperations;
 import org.uag.netsim.core.layer.app.client.AppLayerClient;
-import org.uag.netsim.core.layer.network.NetworkLayerClient;
 
 @SuppressWarnings("rawtypes")
 @Component("appLayerNode")
@@ -27,7 +26,7 @@ import org.uag.netsim.core.layer.network.NetworkLayerClient;
 public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 ,AppLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,AppLayerClient> {
+,AppLayerClient> implements AppLayerAPSMEOperations{
 
 	/*@Autowired
 	@Qualifier("networkLayerClient")
@@ -36,6 +35,8 @@ public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 	public static int MAX_THREADS = 10;
 	private ThreadPoolExecutor apsdeRequestExecutor;
 	private ThreadPoolExecutor apsmeRequestExecutor;
+	
+	 protected Map<Beacon,List<Beacon>> neighbors;
 	
 	final static Logger logger = Logger.getLogger(AppLayerNode.class);
 	public final Map<Class<APSDERequestDispatcher>,List<DefaultLayerTcpConnection>> APSDE_CONN_MAP = 
@@ -47,6 +48,8 @@ public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 		super(AppLayerRequestDispatcher.class,AppLayerTcpRequestDispatcher.class,DefaultLayerTcpConnection.class,AppLayerClient.class);
 		APSDE_CONN_MAP.put(APSDERequestDispatcher.class,new ArrayList<DefaultLayerTcpConnection>());
 		APSME_CONN_MAP.put(APSMERequestDispatcher.class,new ArrayList<DefaultLayerTcpConnection>());
+		
+		neighbors = new HashMap<Beacon, List<Beacon>>();
 	}
 
 	public static int MIN_PORT_RANGE = 9300;
@@ -121,6 +124,24 @@ public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 			}
 		}
 		return result;
+	}
+
+	@Override
+	public boolean addNeigbor(Beacon beacon,Beacon neighbor) throws Exception{
+		if(!alreadyRegistered(neighbor, neighbors.get(beacon))){
+			neighbors.get(beacon.getType()).add(beacon);
+			return true;
+		}
+		return false;
+	}
+	private boolean alreadyRegistered(Beacon beacon,List<Beacon> beacons) {
+		for(Beacon registeredNeighbord:beacons) {
+			if(registeredNeighbord.getPanId() == beacon.getPanId() 
+					&& registeredNeighbord.getExtendedPanId() == beacon.getExtendedPanId()) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }

@@ -1,20 +1,36 @@
 package org.uag.netsim.core.layer.network;
 
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.client.AbstractLayerClient;
+import org.uag.netsim.core.device.Beacon;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
+import org.uag.netsim.core.layer.LayerTcpResponse;
+import org.uag.netsim.core.layer.LayerTcpResponse.STATUS;
+import org.uag.netsim.core.layer.network.NLME.NLMEConfirm;
+import org.uag.netsim.core.layer.network.NLME.NLMERequest;
+import org.uag.netsim.core.layer.phy.RFChannel;
 
 @Component("networkLayerClient")
 @Scope("prototype")
-public class NetworkLayerClient extends AbstractLayerClient<NetworkLayerRequest>{
+public class NetworkLayerClient extends AbstractLayerClient<NetworkLayerRequest>
+implements NetworkLayerNLMEOperations{
+	
+	private LayerTcpConnectionHandler nlmeSAPHandler;
 
 	public NetworkLayerClient() throws Exception {
 		super(NetworkLayerRequest.class);
+		nlmeSAPHandler = openNLMESAP();
 	}
 	public NetworkLayerClient(ICoreLog log) throws Exception {
 		super(NetworkLayerRequest.class,log);
@@ -62,6 +78,85 @@ public class NetworkLayerClient extends AbstractLayerClient<NetworkLayerRequest>
 		DatagramPacket response = sendRequest(request);
 		NetworkLayerResponse confirm = (NetworkLayerResponse)ObjectSerializer.unserialize(response.getData());
 		return (confirm.getStatus()== NetworkLayerResponse.STATUS.SUCCESS);
+	}
+	private NLMEConfirm sendNLMERequest(NLMERequest request) throws Exception{
+		NLMEConfirm confirm = new NLMEConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		Socket socket = new Socket(nlmeSAPHandler.getHost(),nlmeSAPHandler.getPort());
+		
+		ObjectOutputStream out = new ObjectOutputStream(
+				socket.getOutputStream());
+		out.writeObject(request);
+		out.flush();
+		ObjectInputStream in = new ObjectInputStream(
+				socket.getInputStream());
+		confirm = (NLMEConfirm)in.readObject();
+		out.close();
+		socket.close();
+		return confirm;
+	}
+	@Override
+	public Beacon networkFormation(Beacon beacon) throws Exception{
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		List<Beacon> beacons = new ArrayList<Beacon>();
+		beacons.add(beacon);
+		request.setBeacons(beacons);
+		request.setPrimitive(NLMERequest.PRIMITIVE.REQUEST_NETWORK_FORMATION);
+		confirm = sendNLMERequest(request);
+		return confirm.getBeacons().get(0);
+	}
+
+	@Override
+	public Map<RFChannel, List<Beacon>> discovery(Beacon beacon) throws Exception{
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		List<Beacon> beacons = new ArrayList<Beacon>();
+		beacons.add(beacon);
+		request.setBeacons(beacons);
+		request.setPrimitive(NLMERequest.PRIMITIVE.REQUEST_NETWORK_FORMATION);
+		confirm = sendNLMERequest(request);
+		return confirm.getAvailableNetworks();
+	}
+	@Override
+	public List<Beacon> join(RFChannel channel,Beacon beacon,Beacon joinBeacon) throws Exception{
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		List<Beacon> beacons = new ArrayList<Beacon>();
+		beacons.add(beacon);
+		beacons.add(joinBeacon);
+		request.setBeacons(beacons);
+		request.setChannel(channel);
+		request.setPrimitive(NLMERequest.PRIMITIVE.NETWORK_JOIN);
+		confirm = sendNLMERequest(request);
+		return confirm.getBeacons();
+	}
+	@Override
+	public boolean associate(Beacon beacon,List<Beacon> neighbors) throws Exception {
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		List<Beacon> beacons = new ArrayList<Beacon>();
+		beacons.add(beacon);
+		beacons.addAll(neighbors);
+		request.setBeacons(beacons);
+		request.setPrimitive(NLMERequest.PRIMITIVE.ASSOCIATE);
+		confirm = sendNLMERequest(request);
+		return (confirm.getStatus() == STATUS.SUCCESS);
+	}
+	@Override
+	public void transmitData() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void retransmitData() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void requestExtenedPanId() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

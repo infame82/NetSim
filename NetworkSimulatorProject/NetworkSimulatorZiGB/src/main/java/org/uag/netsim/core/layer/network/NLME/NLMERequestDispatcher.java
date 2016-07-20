@@ -2,9 +2,16 @@ package org.uag.netsim.core.layer.network.NLME;
 
 import java.io.IOException;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
+import org.uag.netsim.core.device.Beacon;
 import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
 import org.uag.netsim.core.layer.LayerNode;
+import org.uag.netsim.core.layer.LayerTcpResponse;
+import org.uag.netsim.core.layer.network.NetworkLayerNode;
+import org.uag.netsim.core.layer.phy.RFChannel;
 
 public class NLMERequestDispatcher 
 extends AbstractLayerTcpRequestDispatcher<NLMERequest,NLMEConfirm>{
@@ -15,6 +22,64 @@ extends AbstractLayerTcpRequestDispatcher<NLMERequest,NLMEConfirm>{
 
 	@Override
 	protected NLMEConfirm resolveRequest(NLMERequest request) {
+		NLMEConfirm confirm = new NLMEConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		NetworkLayerNode node =  (NetworkLayerNode)super.node;
+		
+		switch(request.getPrimitive()){
+		case  ASSOCIATE:
+			Beacon abeacon = request.getBeacons().get(0);
+			List<Beacon> neighbors = request.getBeacons().subList(1, request.getBeacons().size());
+			try {
+				if(node.associate(abeacon, neighbors)){
+					confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+			}
+			break;
+		case NETWORK_DISCOVERY:
+			try {
+				Map<RFChannel, List<Beacon>> availableNetworks = node.discovery(request.getBeacons().get(0));
+				confirm.setAvailableNetworks(availableNetworks);
+				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+			}
+			break;
+		case NETWORK_JOIN:
+			try {
+				List<Beacon> beacons = node.join(request.getChannel(), request.getBeacons().get(0), request.getBeacons().get(1));
+				confirm.setBeacons(beacons);
+				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+			}
+			break;
+		case REQUEST_EXT_PAN_ID:
+			break;
+		case REQUEST_NETWORK_FORMATION:
+			try {
+				Beacon beacon = node.networkFormation(request.getBeacons().get(0));
+				List<Beacon> beacons = new ArrayList<Beacon>();
+				beacons.add(beacon);
+				confirm.setBeacons(beacons);
+				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+			} catch (Exception e) {
+				e.printStackTrace();
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+			}
+			break;
+		case RETRANSMISSION:
+			break;
+		case TRANSMISSION:
+			break;
+			default:
+				break;
+		}
 		
 		return null;
 	}
