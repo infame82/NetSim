@@ -13,7 +13,7 @@ public interface MacLayerMLMEOperations {
 	List<RFChannel> energyDetectionScan();
 	Map<RFChannel,List<Beacon>> activeScan(List<RFChannel> channels,Beacon beacon);
 	boolean setPANId(RFChannel channel,Beacon beacon);
-	List<Beacon> association(Beacon beacon,Beacon joinBeacon);
+	List<Beacon> association(Beacon beacon,Beacon joinBeacon) throws Exception;
 	boolean transmission(Beacon beacon) throws Exception;
 	boolean start(RFChannel channel,Beacon beacon);
 	

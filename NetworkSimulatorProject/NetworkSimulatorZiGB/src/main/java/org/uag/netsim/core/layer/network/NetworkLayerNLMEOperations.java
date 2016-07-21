@@ -13,5 +13,5 @@ public interface NetworkLayerNLMEOperations {
 	boolean associate(Beacon beacon,List<Beacon> beacons) throws Exception;
 	void transmitData();
 	void retransmitData();
-	void requestExtenedPanId();
+	int requestExtenedPanId() throws Exception;
 }

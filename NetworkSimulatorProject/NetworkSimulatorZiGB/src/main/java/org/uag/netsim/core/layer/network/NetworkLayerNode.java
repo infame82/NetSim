@@ -279,9 +279,8 @@ public class NetworkLayerNode extends AbstractLayerNode<NetworkLayerRequestDispa
 	}
 
 	@Override
-	public void requestExtenedPanId() {
-		// TODO Auto-generated method stub
-		
+	public int requestExtenedPanId() throws Exception{
+		return 0;
 	}
 	
 }

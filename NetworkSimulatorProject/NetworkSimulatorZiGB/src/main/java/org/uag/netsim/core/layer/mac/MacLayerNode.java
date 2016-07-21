@@ -19,6 +19,7 @@ import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
 import org.uag.netsim.core.layer.mac.MCPS.MCPSRequestDispatcher;
 import org.uag.netsim.core.layer.mac.MLME.MLMERequestDispatcher;
+import org.uag.netsim.core.layer.network.NetworkLayerClient;
 import org.uag.netsim.core.layer.phy.PhyLayerClient;
 import org.uag.netsim.core.layer.phy.RFChannel;
 
@@ -207,8 +208,8 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 	}
 
 	@Override
-	public List<Beacon> association(Beacon beacon,Beacon joinBeacon) {
-		// TODO Auto-generated method stub
+	public List<Beacon> association(Beacon beacon,Beacon joinBeacon) throws Exception {
+		List<Beacon> response = new ArrayList<Beacon>();
 		String beaconId = joinBeacon.getPanId()+":"+joinBeacon.getExtendedPanId();
 		List<Beacon> neighbords = new ArrayList<Beacon>();
 		for(Beacon parent:registeredDevices.get(beaconId)) {
@@ -216,7 +217,16 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 				neighbords.add(parent);
 			}
 		}
-		return null;
+		NetworkLayerClient ntwClient = new NetworkLayerClient();
+		if(ntwClient.associate(beacon, neighbords)){
+			beacon.setPanId(joinBeacon.getPanId());
+			beacon.setExtendedPanId(joinBeacon.getExtendedPanId());
+			registerDevice(beacon);
+			response.add(beacon);
+			response.addAll(neighbords);
+		}
+		
+		return response;
 	}
 
 	@Override

@@ -15,6 +15,7 @@ public class MLMEConfirm extends AbstractLayerTcpResponse {
 	private static final long serialVersionUID = -6730519340099845374L;
 	
 	private List<RFChannel> channels;
+	private List<Beacon> beacons;
 	private Map<RFChannel,List<Beacon>> activeChannels;
 	private Map<String,List<Beacon>>  activeDevices;
 	private long extendedAddress;
@@ -51,5 +52,15 @@ public class MLMEConfirm extends AbstractLayerTcpResponse {
 	public void setActiveDevices(Map<String, List<Beacon>> activeDevices) {
 		this.activeDevices = activeDevices;
 	}
+
+	public List<Beacon> getBeacons() {
+		return beacons;
+	}
+
+	public void setBeacons(List<Beacon> beacons) {
+		this.beacons = beacons;
+	}
+	
+	
 
 }

@@ -158,6 +158,8 @@ implements MacLayerMLMEOperations{
 	}
 	@Override
 	public List<Beacon> association(Beacon beacon,Beacon joinBeacon) {
+		List<Beacon> response = new ArrayList<Beacon>();
+		
 		List<Beacon> beacons = new ArrayList<Beacon>();
 		beacons.add(beacon);
 		beacons.add(joinBeacon);
@@ -167,12 +169,13 @@ implements MacLayerMLMEOperations{
 		request.setPrimitive(MLMERequest.PRIMITIVE.ASSOCIATION);
 		try {
 			confirm = sendMLMERequest(request);
+			response = confirm.getBeacons();
 		} catch (Exception e) {
 			e.printStackTrace();
 			confirm = new MLMEConfirm();
 			confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
 		}
-		return null;
+		return response;
 	}
 	@Override
 	public boolean transmission(Beacon beacon) {

@@ -60,6 +60,13 @@ extends AbstractLayerTcpRequestDispatcher<NLMERequest,NLMEConfirm>{
 			}
 			break;
 		case REQUEST_EXT_PAN_ID:
+			try {
+				confirm.setExtendedPanId(node.requestExtenedPanId());
+				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+			} catch (Exception e1) {
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+				e1.printStackTrace();
+			}
 			break;
 		case REQUEST_NETWORK_FORMATION:
 			try {

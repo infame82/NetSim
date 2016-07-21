@@ -42,9 +42,13 @@ extends AbstractLayerTcpRequestDispatcher<MLMERequest,MLMEConfirm>{
 				}
 				break;
 			case ASSOCIATION:
+			try {
 				List<Beacon> beacons = node.association(request.getBeacons().get(0),request.getBeacons().get(1));
+				confirm.setBeacons(beacons);
 				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
-				
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 				break;
 			case TRANSMISSION:
 				try {

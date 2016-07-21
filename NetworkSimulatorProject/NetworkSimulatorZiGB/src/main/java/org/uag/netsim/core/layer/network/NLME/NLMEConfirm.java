@@ -16,7 +16,7 @@ public class NLMEConfirm extends AbstractLayerTcpResponse {
 
 	private List<Beacon> beacons;
 	private Map<RFChannel, List<Beacon>> availableNetworks;
-
+	private int extendedPanId;
 	
 
 	public List<Beacon> getBeacons() {
@@ -34,6 +34,15 @@ public class NLMEConfirm extends AbstractLayerTcpResponse {
 	public void setAvailableNetworks(Map<RFChannel, List<Beacon>> availableNetworks) {
 		this.availableNetworks = availableNetworks;
 	}
+
+	public int getExtendedPanId() {
+		return extendedPanId;
+	}
+
+	public void setExtendedPanId(int extendedPanId) {
+		this.extendedPanId = extendedPanId;
+	}
+	
 	
 	
 }

@@ -154,9 +154,12 @@ implements NetworkLayerNLMEOperations{
 		
 	}
 	@Override
-	public void requestExtenedPanId() {
-		// TODO Auto-generated method stub
-		
+	public int requestExtenedPanId() throws Exception {
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		request.setPrimitive(NLMERequest.PRIMITIVE.REQUEST_EXT_PAN_ID);
+		confirm = sendNLMERequest(request);
+		return confirm.getExtendedPanId();
 	}
 	
 }
