@@ -3,6 +3,7 @@ package org.uag.netsim.core.layer.network.NLME;
 import java.util.List;
 
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpRequest;
 import org.uag.netsim.core.layer.phy.RFChannel;
 
@@ -18,6 +19,8 @@ public class NLMERequest implements LayerTcpRequest<NLMERequest.PRIMITIVE>{
     private PRIMITIVE primitive;
     private List<Beacon> beacons;
     private RFChannel channel;
+    private Object data;
+    private DataPackage pack;
 
     public PRIMITIVE getPrimitive() {
         return primitive;
@@ -41,6 +44,22 @@ public class NLMERequest implements LayerTcpRequest<NLMERequest.PRIMITIVE>{
 
 	public void setChannel(RFChannel channel) {
 		this.channel = channel;
+	}
+
+	public Object getData() {
+		return data;
+	}
+
+	public void setData(Object data) {
+		this.data = data;
+	}
+
+	public DataPackage getPack() {
+		return pack;
+	}
+
+	public void setPack(DataPackage pack) {
+		this.pack = pack;
 	}
 
 	

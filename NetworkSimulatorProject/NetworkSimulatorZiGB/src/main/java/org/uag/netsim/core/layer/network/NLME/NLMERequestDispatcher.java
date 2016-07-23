@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.AbstractLayerTcpRequestDispatcher;
 import org.uag.netsim.core.layer.LayerNode;
 import org.uag.netsim.core.layer.LayerTcpResponse;
@@ -81,8 +82,32 @@ extends AbstractLayerTcpRequestDispatcher<NLMERequest,NLMEConfirm>{
 			}
 			break;
 		case RETRANSMISSION:
+			try {
+				DataPackage data = node.retransmitData(request.getBeacons(), request.getPack());
+				if(data!=null){
+					confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+					confirm.setData(data);
+				}else{
+					confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+				}
+			} catch (Exception e) {
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+				e.printStackTrace();
+			}
 			break;
 		case TRANSMISSION:
+			try {
+				DataPackage data = node.transmitData(request.getBeacons(), request.getData());
+				if(data!=null){
+					confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
+					confirm.setData(data);
+				}else{
+					confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+				}
+			} catch (Exception e) {
+				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
+				e.printStackTrace();
+			}
 			break;
 			default:
 				break;

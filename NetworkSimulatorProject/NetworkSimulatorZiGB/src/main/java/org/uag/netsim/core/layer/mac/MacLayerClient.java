@@ -14,6 +14,7 @@ import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.client.AbstractLayerClient;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
 import org.uag.netsim.core.layer.mac.MLME.MLMEConfirm;
@@ -178,24 +179,23 @@ implements MacLayerMLMEOperations{
 		return response;
 	}
 	@Override
-	public boolean transmission(Beacon beacon) {
-		List<Beacon> beacons = new ArrayList<Beacon>();
-		beacons.add(beacon);
+	public DataPackage transmission(List<Beacon> beacons,DataPackage data) {
 		MLMERequest request = new MLMERequest();
 		MLMEConfirm confirm = null;
 		request.setBeacons(beacons);
+		request.setData(data);
 		request.setPrimitive(MLMERequest.PRIMITIVE.TRANSMISSION);
 		try {
 			confirm = sendMLMERequest(request);
 			if(confirm.getStatus()==LayerTcpResponse.STATUS.SUCCESS){
-				return true;
+				return confirm.getData();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			confirm = new MLMEConfirm();
 			confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
 		}
-		return false;
+		return null;
 		
 	}
 	@Override

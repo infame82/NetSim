@@ -11,9 +11,11 @@ import org.springframework.stereotype.Component;
 import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.client.AbstractLayerClient;
+import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.Beacon.RF_CHANNEL;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
-import org.uag.netsim.core.layer.phy.RFChannel.RF_CHANNEL;
 import org.uag.netsim.core.layer.phy.PLME.PLMEConfirm;
 import org.uag.netsim.core.layer.phy.PLME.PLMERequest;
 
@@ -120,5 +122,21 @@ implements PhyLayerPLMEOperations{
 			confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
 		}
 		return confirm.getChannels();
+	}
+	@Override
+	public boolean transmit(RF_CHANNEL channel, List<Beacon> beacons, DataPackage data) throws Exception {
+		PLMERequest request = new PLMERequest();
+		PLMEConfirm confirm = null;
+		request.setChannel(channel);
+		request.setBeacons(beacons);
+		request.setData(data);
+		try {
+			confirm = sendPLMERequest(request);
+		} catch (Exception e) {
+			e.printStackTrace();
+			confirm = new PLMEConfirm();
+			confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		}
+		return confirm.getStatus()==LayerTcpResponse.STATUS.SUCCESS;
 	}
 }

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.uag.netsim.core.client.AbstractLayerTcpResponse;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.phy.RFChannel;
 
 public class NLMEConfirm extends AbstractLayerTcpResponse {
@@ -17,6 +18,7 @@ public class NLMEConfirm extends AbstractLayerTcpResponse {
 	private List<Beacon> beacons;
 	private Map<RFChannel, List<Beacon>> availableNetworks;
 	private int extendedPanId;
+	private DataPackage data;
 	
 
 	public List<Beacon> getBeacons() {
@@ -41,6 +43,14 @@ public class NLMEConfirm extends AbstractLayerTcpResponse {
 
 	public void setExtendedPanId(int extendedPanId) {
 		this.extendedPanId = extendedPanId;
+	}
+
+	public DataPackage getData() {
+		return data;
+	}
+
+	public void setData(DataPackage data) {
+		this.data = data;
 	}
 	
 	

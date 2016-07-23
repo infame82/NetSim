@@ -14,6 +14,7 @@ import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.client.AbstractLayerClient;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
 import org.uag.netsim.core.layer.LayerTcpResponse.STATUS;
@@ -143,14 +144,27 @@ implements NetworkLayerNLMEOperations{
 		confirm = sendNLMERequest(request);
 		return (confirm.getStatus() == STATUS.SUCCESS);
 	}
+	
 	@Override
-	public void transmitData() {
-		// TODO Auto-generated method stub
-		
+	public DataPackage transmitData(List<Beacon> beacons, Object data) throws Exception {
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		request.setBeacons(beacons);
+		request.setData(data);
+		request.setPrimitive(NLMERequest.PRIMITIVE.TRANSMISSION);
+		confirm = sendNLMERequest(request);
+		return confirm.getData();
 	}
+
 	@Override
-	public void retransmitData() {
-		// TODO Auto-generated method stub
+	public DataPackage retransmitData(List<Beacon> beacons,DataPackage data) throws Exception {
+		NLMERequest request = new NLMERequest();
+		NLMEConfirm confirm = null;
+		request.setBeacons(beacons);
+		request.setPack(data);
+		request.setPrimitive(NLMERequest.PRIMITIVE.RETRANSMISSION);
+		confirm = sendNLMERequest(request);
+		return confirm.getData();
 		
 	}
 	@Override
@@ -161,5 +175,6 @@ implements NetworkLayerNLMEOperations{
 		confirm = sendNLMERequest(request);
 		return confirm.getExtendedPanId();
 	}
+	
 	
 }

@@ -1,5 +1,8 @@
 package org.uag.netsim.core.layer.phy;
 
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,9 +15,12 @@ import javax.annotation.PostConstruct;
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.uag.netsim.core.ObjectSerializer;
+import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.Beacon.RF_CHANNEL;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
-import org.uag.netsim.core.layer.phy.RFChannel.RF_CHANNEL;
 import org.uag.netsim.core.layer.phy.PD.PDRequestDispatcher;
 import org.uag.netsim.core.layer.phy.PLME.PLMERequestDispatcher;
 
@@ -150,5 +156,26 @@ public class PhyLayerNode extends AbstractLayerNode<PhyLayerRequestDispatcher
 			}
 		}
 		return result;
+	}
+
+	@Override
+	public boolean transmit(RF_CHANNEL channel, List<Beacon> beacons, DataPackage data) throws Exception {
+		increaseEnergyLevel(channel);
+		DatagramSocket sender = null;
+		byte[] msgBytes = ObjectSerializer.serialize(data);
+		try {
+			sender = new DatagramSocket();
+			for(Beacon neighbord:beacons.subList(1, beacons.size())){
+				sender.send(new DatagramPacket(msgBytes, msgBytes.length,neighbord.getIp(),neighbord.getPort()));
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}finally {
+			if(sender!=null) {
+				sender.close();
+			}
+		}
+		return true;
 	}
 }

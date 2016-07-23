@@ -11,13 +11,13 @@ public class AbstractLayerTcpResponse implements LayerTcpResponse {
 	 */
 	private static final long serialVersionUID = -4984972992022526727L;
 	private STATUS status;
-    private String data;
+    //private String data;
 
    
 
-    public void setData(String data) {
+   /* public void setData(String data) {
         this.data = data;
-    }
+    }*/
 
 
 
@@ -27,9 +27,9 @@ public class AbstractLayerTcpResponse implements LayerTcpResponse {
 
 
 
-	public String getData() {
+/*	public String getData() {
 		return data;
-	}
+	}*/
 	
 
 

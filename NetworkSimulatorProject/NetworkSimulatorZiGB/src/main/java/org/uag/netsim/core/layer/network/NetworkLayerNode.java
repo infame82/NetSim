@@ -15,6 +15,8 @@ import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.Beacon.RF_CHANNEL;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
 import org.uag.netsim.core.layer.app.client.AppLayerClient;
@@ -22,7 +24,6 @@ import org.uag.netsim.core.layer.mac.MacLayerClient;
 import org.uag.netsim.core.layer.network.NLDE.NLDERequestDispatcher;
 import org.uag.netsim.core.layer.network.NLME.NLMERequestDispatcher;
 import org.uag.netsim.core.layer.phy.RFChannel;
-import org.uag.netsim.core.layer.phy.RFChannel.RF_CHANNEL;
 
 @SuppressWarnings("rawtypes")
 @Component("networkLayerNode")
@@ -267,15 +268,21 @@ public class NetworkLayerNode extends AbstractLayerNode<NetworkLayerRequestDispa
 
 
 	@Override
-	public void transmitData() {
-		// TODO Auto-generated method stub
+	public DataPackage transmitData(List<Beacon> beacons,Object data) throws Exception {
+		DataPackage dataPackage = new DataPackage();
+		dataPackage.setData(data);
+		dataPackage.setExpiration(5);
+		dataPackage.setId(new Random().nextInt());
 		
+		MacLayerClient macClient = new MacLayerClient();
+		return macClient.transmission(beacons,dataPackage);
 	}
 
 	@Override
-	public void retransmitData() {
-		// TODO Auto-generated method stub
-		
+	public DataPackage retransmitData(List<Beacon> beacons,DataPackage data) throws Exception{
+		data.setExpiration(data.getExpiration()-1);
+		MacLayerClient macClient = new MacLayerClient();
+		return macClient.transmission(beacons,data);
 	}
 
 	@Override

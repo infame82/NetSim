@@ -3,6 +3,7 @@ package org.uag.netsim.core.layer.mac.MLME;
 import java.util.List;
 
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpRequest;
 import org.uag.netsim.core.layer.phy.RFChannel;
 
@@ -14,6 +15,7 @@ public class MLMERequest implements LayerTcpRequest<MLMERequest.PRIMITIVE>{
 
     private PRIMITIVE primitive;
     private List<Beacon> beacons;
+    private DataPackage data;
     
     private List<RFChannel> channels;
     
@@ -41,6 +43,14 @@ public class MLMERequest implements LayerTcpRequest<MLMERequest.PRIMITIVE>{
 
 	public void setBeacons(List<Beacon> beacons) {
 		this.beacons = beacons;
+	}
+
+	public DataPackage getData() {
+		return data;
+	}
+
+	public void setData(DataPackage data) {
+		this.data = data;
 	}
 
 

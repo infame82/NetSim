@@ -10,5 +10,5 @@ public interface LayerTcpResponse extends Serializable {
 
     STATUS getStatus();
 
-    String getData();
+    //String getData();
 }

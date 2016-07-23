@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.uag.netsim.core.client.AbstractLayerTcpResponse;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.phy.RFChannel;
 
 public class MLMEConfirm extends AbstractLayerTcpResponse {
@@ -19,6 +20,7 @@ public class MLMEConfirm extends AbstractLayerTcpResponse {
 	private Map<RFChannel,List<Beacon>> activeChannels;
 	private Map<String,List<Beacon>>  activeDevices;
 	private long extendedAddress;
+	private DataPackage data;
 	
 
 	public List<RFChannel> getChannels() {
@@ -59,6 +61,14 @@ public class MLMEConfirm extends AbstractLayerTcpResponse {
 
 	public void setBeacons(List<Beacon> beacons) {
 		this.beacons = beacons;
+	}
+
+	public DataPackage getData() {
+		return data;
+	}
+
+	public void setData(DataPackage data) {
+		this.data = data;
 	}
 	
 	

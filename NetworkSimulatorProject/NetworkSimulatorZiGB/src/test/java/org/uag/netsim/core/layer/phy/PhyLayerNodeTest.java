@@ -9,7 +9,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.uag.netsim.core.layer.phy.RFChannel.RF_CHANNEL;
+import org.uag.netsim.core.device.Beacon.RF_CHANNEL;
 
 @ContextConfiguration(locations = { "classpath:META-INF/spring/spring-ctx.xml" })
 public class PhyLayerNodeTest extends AbstractTestNGSpringContextTests{

@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
 import org.uag.netsim.core.layer.mac.MCPS.MCPSRequestDispatcher;
@@ -230,9 +231,10 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 	}
 
 	@Override
-	public boolean transmission(Beacon beacon) throws Exception {
+	public DataPackage transmission(List<Beacon> beacons,DataPackage data) throws Exception {
 		List<Beacon> registeredBeacons = null;
 		RFChannel transmissionChannel = null;
+		Beacon beacon = beacons.get(0);
 		for(RFChannel channel:registeredNetworks.keySet()) {
 			registeredBeacons = registeredNetworks.get(channel);
 			if(registeredBeacons!=null && !registeredBeacons.isEmpty()) {
@@ -247,11 +249,14 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 		}
 		
 		if(transmissionChannel==null) {
-			return false;
+			return null;
 		}
+		data.setChannel(transmissionChannel.getChannel());
 		PhyLayerClient phyClient = new PhyLayerClient();
-		phyClient.increaseEnergyLevel(transmissionChannel.getChannel());
-		return true;
+		if( phyClient.transmit(transmissionChannel.getChannel(), beacons.subList(1, beacons.size()), data)){
+			return data;
+		}
+		return null;
 	}
 
 	@Override
