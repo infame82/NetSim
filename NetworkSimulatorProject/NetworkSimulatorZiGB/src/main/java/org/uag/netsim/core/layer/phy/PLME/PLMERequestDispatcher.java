@@ -26,15 +26,6 @@ extends AbstractLayerTcpRequestDispatcher<PLMERequest,PLMEConfirm>{
 			if(node.increaseEnergyLevel(request.getChannel())){
 				confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
 			}
-		}else if( request.getPrimitive() == PLMERequest.PRIMITIVE.TRANSMIT ){
-			try {
-				if(node.transmit(request.getChannel(), request.getBeacons(), request.getData())){
-					confirm.setStatus(LayerTcpResponse.STATUS.SUCCESS);
-				}
-			} catch (Exception e) {
-				confirm.setStatus(LayerTcpResponse.STATUS.ERROR);
-				e.printStackTrace();
-			}
 		}
 		return confirm;
 	}

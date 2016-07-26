@@ -18,6 +18,8 @@ import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
 import org.uag.netsim.core.layer.LayerTcpResponse.STATUS;
+import org.uag.netsim.core.layer.network.NLDE.NLDEConfirm;
+import org.uag.netsim.core.layer.network.NLDE.NLDERequest;
 import org.uag.netsim.core.layer.network.NLME.NLMEConfirm;
 import org.uag.netsim.core.layer.network.NLME.NLMERequest;
 import org.uag.netsim.core.layer.phy.RFChannel;
@@ -25,13 +27,15 @@ import org.uag.netsim.core.layer.phy.RFChannel;
 @Component("networkLayerClient")
 @Scope("prototype")
 public class NetworkLayerClient extends AbstractLayerClient<NetworkLayerRequest>
-implements NetworkLayerNLMEOperations{
+implements NetworkLayerNLMEOperations,NetworkLayerNLDEOperations{
 	
 	private LayerTcpConnectionHandler nlmeSAPHandler;
+	private LayerTcpConnectionHandler nldeSAPHandler;
 
 	public NetworkLayerClient() throws Exception {
 		super(NetworkLayerRequest.class);
 		nlmeSAPHandler = openNLMESAP();
+		nldeSAPHandler = openNLDESAP();
 	}
 	public NetworkLayerClient(ICoreLog log) throws Exception {
 		super(NetworkLayerRequest.class,log);
@@ -96,6 +100,22 @@ implements NetworkLayerNLMEOperations{
 		socket.close();
 		return confirm;
 	}
+	private NLDEConfirm sendNLDERequest(NLDERequest request) throws Exception{
+		NLDEConfirm confirm = new NLDEConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		Socket socket = new Socket(nldeSAPHandler.getHost(),nldeSAPHandler.getPort());
+		
+		ObjectOutputStream out = new ObjectOutputStream(
+				socket.getOutputStream());
+		out.writeObject(request);
+		out.flush();
+		ObjectInputStream in = new ObjectInputStream(
+				socket.getInputStream());
+		confirm = (NLDEConfirm)in.readObject();
+		out.close();
+		socket.close();
+		return confirm;
+	}
 	@Override
 	public Beacon networkFormation(Beacon beacon) throws Exception{
 		NLMERequest request = new NLMERequest();
@@ -147,23 +167,23 @@ implements NetworkLayerNLMEOperations{
 	
 	@Override
 	public DataPackage transmitData(List<Beacon> beacons, Object data) throws Exception {
-		NLMERequest request = new NLMERequest();
-		NLMEConfirm confirm = null;
+		NLDERequest request = new NLDERequest();
+		NLDEConfirm confirm = null;
 		request.setBeacons(beacons);
 		request.setData(data);
-		request.setPrimitive(NLMERequest.PRIMITIVE.TRANSMISSION);
-		confirm = sendNLMERequest(request);
+		request.setPrimitive(NLDERequest.PRIMITIVE.TRANSMISSION);
+		confirm = sendNLDERequest(request);
 		return confirm.getData();
 	}
 
 	@Override
 	public DataPackage retransmitData(List<Beacon> beacons,DataPackage data) throws Exception {
-		NLMERequest request = new NLMERequest();
-		NLMEConfirm confirm = null;
+		NLDERequest request = new NLDERequest();
+		NLDEConfirm confirm = null;
 		request.setBeacons(beacons);
 		request.setPack(data);
-		request.setPrimitive(NLMERequest.PRIMITIVE.RETRANSMISSION);
-		confirm = sendNLMERequest(request);
+		request.setPrimitive(NLDERequest.PRIMITIVE.RETRANSMISSION);
+		confirm = sendNLDERequest(request);
 		return confirm.getData();
 		
 	}

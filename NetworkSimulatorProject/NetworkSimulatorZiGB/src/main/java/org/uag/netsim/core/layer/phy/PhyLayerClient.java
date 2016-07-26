@@ -16,19 +16,23 @@ import org.uag.netsim.core.device.Beacon.RF_CHANNEL;
 import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
+import org.uag.netsim.core.layer.phy.PD.PDConfirm;
+import org.uag.netsim.core.layer.phy.PD.PDRequest;
 import org.uag.netsim.core.layer.phy.PLME.PLMEConfirm;
 import org.uag.netsim.core.layer.phy.PLME.PLMERequest;
 
 @Component("phyLayerClient")
 @Scope("prototype")
 public class PhyLayerClient extends AbstractLayerClient<PhyLayerRequest>
-implements PhyLayerPLMEOperations{
+implements PhyLayerPLMEOperations,PhyLayerPDOperations{
 	
 	private LayerTcpConnectionHandler plmeSAPHandler;
+	private LayerTcpConnectionHandler pdSAPHandler;
 
 	public PhyLayerClient() throws Exception {
 		super(PhyLayerRequest.class);
 		plmeSAPHandler = openPLMESAP();
+		pdSAPHandler = openPDSAP();
 	}
 	public PhyLayerClient(ICoreLog log) throws Exception {
 		super(PhyLayerRequest.class,log);
@@ -94,6 +98,22 @@ implements PhyLayerPLMEOperations{
 		socket.close();
 		return confirm;
 	}
+	private PDConfirm sendPDRequest(PDRequest request) throws Exception{
+		PDConfirm confirm = new PDConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		Socket socket = new Socket(pdSAPHandler.getHost(),pdSAPHandler.getPort());
+		
+		ObjectOutputStream out = new ObjectOutputStream(
+				socket.getOutputStream());
+		out.writeObject(request);
+		out.flush();
+		ObjectInputStream in = new ObjectInputStream(
+				socket.getInputStream());
+		confirm = (PDConfirm)in.readObject();
+		out.close();
+		socket.close();
+		return confirm;
+	}
 	@Override
 	public boolean increaseEnergyLevel(RF_CHANNEL channel) {
 		PLMERequest request = new PLMERequest();
@@ -125,16 +145,16 @@ implements PhyLayerPLMEOperations{
 	}
 	@Override
 	public boolean transmit(RF_CHANNEL channel, List<Beacon> beacons, DataPackage data) throws Exception {
-		PLMERequest request = new PLMERequest();
-		PLMEConfirm confirm = null;
+		PDRequest request = new PDRequest();
+		PDConfirm confirm = null;
 		request.setChannel(channel);
 		request.setBeacons(beacons);
 		request.setData(data);
 		try {
-			confirm = sendPLMERequest(request);
+			confirm = sendPDRequest(request);
 		} catch (Exception e) {
 			e.printStackTrace();
-			confirm = new PLMEConfirm();
+			confirm = new PDConfirm();
 			confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
 		}
 		return confirm.getStatus()==LayerTcpResponse.STATUS.SUCCESS;

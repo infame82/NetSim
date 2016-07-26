@@ -13,26 +13,31 @@ import org.uag.netsim.core.ICoreLog;
 import org.uag.netsim.core.ObjectSerializer;
 import org.uag.netsim.core.client.AbstractLayerClient;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
 import org.uag.netsim.core.layer.LayerTcpResponse.STATUS;
+import org.uag.netsim.core.layer.app.APSDE.APSDEConfirm;
+import org.uag.netsim.core.layer.app.APSDE.APSDERequest;
 import org.uag.netsim.core.layer.app.APSME.APSMEConfirm;
 import org.uag.netsim.core.layer.app.APSME.APSMERequest;
 
 @Component("appLayerClient")
 @Scope("prototype")
 public class AppLayerClient extends AbstractLayerClient<AppLayerRequest>
-implements AppLayerAPSMEOperations
+implements AppLayerAPSMEOperations,AppLayerAPSDEOperations
 {
 	
 	public static int MIN_PORT_RANGE = 9300;
 	public static int MAX_PORT_RANGE = 9309;
 	
 	private LayerTcpConnectionHandler apsmeSAPHandler;
+	private LayerTcpConnectionHandler apsdeSAPHandler;
 	
 	public AppLayerClient() throws Exception {
 		super(AppLayerRequest.class);
 		apsmeSAPHandler = openAPSMESAP();
+		apsdeSAPHandler = openAPSMESAP();
 	}
 	public AppLayerClient(ICoreLog log) throws Exception {
 		super(AppLayerRequest.class,log);
@@ -98,6 +103,24 @@ implements AppLayerAPSMEOperations
 		socket.close();
 		return confirm;
 	}
+	
+	private APSDEConfirm sendAPSDERequest(APSDERequest request) throws Exception{
+		APSDEConfirm confirm = new APSDEConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		Socket socket = new Socket(apsdeSAPHandler.getHost(),apsdeSAPHandler.getPort());
+		
+		ObjectOutputStream out = new ObjectOutputStream(
+				socket.getOutputStream());
+		out.writeObject(request);
+		out.flush();
+		ObjectInputStream in = new ObjectInputStream(
+				socket.getInputStream());
+		confirm = (APSDEConfirm)in.readObject();
+		out.close();
+		socket.close();
+		return confirm;
+	}
+	
 	@Override
 	public boolean addNeigbor(Beacon beacon,Beacon neighbor) throws Exception {
 		APSMERequest request = new APSMERequest();
@@ -109,5 +132,15 @@ implements AppLayerAPSMEOperations
 		request.setPrimitive(APSMERequest.PRIMITIVE.ADD_NEIGHBOR);
 		confirm = sendAPSMERequest(request);
 		return (confirm.getStatus() == STATUS.SUCCESS);
+	}
+	@Override
+	public DataPackage transmitData(Beacon beacon, Object data) throws Exception {
+		APSDERequest request = new APSDERequest();
+		APSDEConfirm confirm = null;
+		request.setBeacon(beacon);
+		request.setData(data);
+		request.setPrimitive(APSDERequest.PRIMITIVE.TRANSMIT);
+		confirm = sendAPSDERequest(request);
+		return confirm.getDataPack();
 	}
 }

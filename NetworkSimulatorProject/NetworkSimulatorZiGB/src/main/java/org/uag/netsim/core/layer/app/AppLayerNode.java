@@ -13,12 +13,15 @@ import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.uag.netsim.core.device.Beacon;
+import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.AbstractLayerNode;
 import org.uag.netsim.core.layer.DefaultLayerTcpConnection;
 import org.uag.netsim.core.layer.APSME.APSMERequestDispatcher;
 import org.uag.netsim.core.layer.app.APSDE.APSDERequestDispatcher;
 import org.uag.netsim.core.layer.app.client.AppLayerAPSMEOperations;
+import org.uag.netsim.core.layer.app.client.AppLayerAPSDEOperations;
 import org.uag.netsim.core.layer.app.client.AppLayerClient;
+import org.uag.netsim.core.layer.network.NetworkLayerClient;
 
 @SuppressWarnings("rawtypes")
 @Component("appLayerNode")
@@ -26,7 +29,7 @@ import org.uag.netsim.core.layer.app.client.AppLayerClient;
 public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 ,AppLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,AppLayerClient> implements AppLayerAPSMEOperations{
+,AppLayerClient> implements AppLayerAPSMEOperations,AppLayerAPSDEOperations{
 
 	/*@Autowired
 	@Qualifier("networkLayerClient")
@@ -142,6 +145,23 @@ public class AppLayerNode extends AbstractLayerNode<AppLayerRequestDispatcher
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public DataPackage transmitData(Beacon beacon,Object data) throws Exception {
+		NetworkLayerClient ntwClient = new NetworkLayerClient();
+		
+		if(this.neighbors.get(beacon) == null || this.neighbors.get(beacon).isEmpty()){
+			throw new Exception("No neighbors to transmit");
+		}
+		List<Beacon> beacons = new ArrayList<Beacon>();
+		beacons.add(beacon);
+		beacons.addAll(this.neighbors.get(beacon));
+		DataPackage pack = ntwClient.transmitData(beacons, data);
+		if(pack==null){
+			throw new Exception("Not possible to send package");
+		}
+		return pack;
 	}
 	
 }

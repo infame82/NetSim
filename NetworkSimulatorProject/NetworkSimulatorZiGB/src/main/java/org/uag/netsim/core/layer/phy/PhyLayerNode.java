@@ -30,7 +30,7 @@ import org.uag.netsim.core.layer.phy.PLME.PLMERequestDispatcher;
 public class PhyLayerNode extends AbstractLayerNode<PhyLayerRequestDispatcher
 ,PhyLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,PhyLayerClient> implements PhyLayerPLMEOperations{
+,PhyLayerClient> implements PhyLayerPLMEOperations,PhyLayerPDOperations{
 	
 	private List<RFChannel> channels;
 	

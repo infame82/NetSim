@@ -29,7 +29,7 @@ import org.uag.netsim.core.layer.phy.RFChannel;
 @Scope("prototype")
 public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,MacLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,MacLayerClient> implements MacLayerMLMEOperations{
+,MacLayerClient> implements MacLayerMLMEOperations,MacLayerMCPSOperations{
 
 	/*@Autowired
 	@Qualifier("phyLayerClient")
@@ -252,6 +252,7 @@ public class MacLayerNode extends AbstractLayerNode<MacLayerRequestDispatcher,Ma
 			return null;
 		}
 		data.setChannel(transmissionChannel.getChannel());
+		data.setBeacon(beacons.get(0));
 		PhyLayerClient phyClient = new PhyLayerClient();
 		if( phyClient.transmit(transmissionChannel.getChannel(), beacons.subList(1, beacons.size()), data)){
 			return data;

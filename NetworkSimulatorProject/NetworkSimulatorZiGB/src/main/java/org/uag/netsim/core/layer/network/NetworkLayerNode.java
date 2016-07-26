@@ -31,7 +31,7 @@ import org.uag.netsim.core.layer.phy.RFChannel;
 public class NetworkLayerNode extends AbstractLayerNode<NetworkLayerRequestDispatcher
 ,NetworkLayerTcpRequestDispatcher
 ,DefaultLayerTcpConnection
-,NetworkLayerClient> implements NetworkLayerNLMEOperations{
+,NetworkLayerClient> implements NetworkLayerNLMEOperations,NetworkLayerNLDEOperations{
 	
 	public static int MAX_THREADS = 10;
 	

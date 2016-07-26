@@ -14,7 +14,7 @@ public class NLMERequest implements LayerTcpRequest<NLMERequest.PRIMITIVE>{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public enum PRIMITIVE{REQUEST_NETWORK_FORMATION,NETWORK_DISCOVERY,NETWORK_JOIN,ASSOCIATE,TRANSMISSION,RETRANSMISSION,REQUEST_EXT_PAN_ID}
+	public enum PRIMITIVE{REQUEST_NETWORK_FORMATION,NETWORK_DISCOVERY,NETWORK_JOIN,ASSOCIATE,REQUEST_EXT_PAN_ID}
 
     private PRIMITIVE primitive;
     private List<Beacon> beacons;

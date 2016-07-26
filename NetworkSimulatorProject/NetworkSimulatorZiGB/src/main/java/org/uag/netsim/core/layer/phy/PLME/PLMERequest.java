@@ -14,7 +14,7 @@ public class PLMERequest implements LayerTcpRequest<PLMERequest.PRIMITIVE>{
 	 */
 	private static final long serialVersionUID = -8503158804221183335L;
 
-	public enum PRIMITIVE{GET_CHANNELS,INCREASE_ENERGY,TRANSMIT}
+	public enum PRIMITIVE{GET_CHANNELS,INCREASE_ENERGY}
 
     private PRIMITIVE primitive;
     

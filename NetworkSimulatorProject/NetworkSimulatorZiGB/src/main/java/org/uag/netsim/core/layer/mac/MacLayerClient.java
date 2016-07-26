@@ -17,6 +17,8 @@ import org.uag.netsim.core.device.Beacon;
 import org.uag.netsim.core.device.DataPackage;
 import org.uag.netsim.core.layer.LayerTcpConnectionHandler;
 import org.uag.netsim.core.layer.LayerTcpResponse;
+import org.uag.netsim.core.layer.mac.MCPS.MCPSConfirm;
+import org.uag.netsim.core.layer.mac.MCPS.MCPSRequest;
 import org.uag.netsim.core.layer.mac.MLME.MLMEConfirm;
 import org.uag.netsim.core.layer.mac.MLME.MLMERequest;
 import org.uag.netsim.core.layer.phy.RFChannel;
@@ -24,13 +26,15 @@ import org.uag.netsim.core.layer.phy.RFChannel;
 @Component("macLayerClient")
 @Scope("prototype")
 public class MacLayerClient extends AbstractLayerClient<MacLayerRequest>
-implements MacLayerMLMEOperations{
+implements MacLayerMLMEOperations,MacLayerMCPSOperations{
 	
 	private LayerTcpConnectionHandler mlmeSAPHandler;
+	private LayerTcpConnectionHandler mcpsSAPHandler;
 
 	public MacLayerClient() throws Exception {
 		super(MacLayerRequest.class);
 		mlmeSAPHandler = openMLMESAP();
+		mcpsSAPHandler = openMCPSSAP();
 	}
 	public MacLayerClient(ICoreLog log) throws Exception {
 		super(MacLayerRequest.class,log);
@@ -91,6 +95,23 @@ implements MacLayerMLMEOperations{
 		ObjectInputStream in = new ObjectInputStream(
 				socket.getInputStream());
 		confirm = (MLMEConfirm)in.readObject();
+		out.close();
+		socket.close();
+		return confirm;
+	}
+	
+	private MCPSConfirm sendMCPSRequest(MCPSRequest request) throws Exception{
+		MCPSConfirm confirm = new MCPSConfirm();
+		confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
+		Socket socket = new Socket(mcpsSAPHandler.getHost(),mlmeSAPHandler.getPort());
+		
+		ObjectOutputStream out = new ObjectOutputStream(
+				socket.getOutputStream());
+		out.writeObject(request);
+		out.flush();
+		ObjectInputStream in = new ObjectInputStream(
+				socket.getInputStream());
+		confirm = (MCPSConfirm)in.readObject();
 		out.close();
 		socket.close();
 		return confirm;
@@ -180,19 +201,19 @@ implements MacLayerMLMEOperations{
 	}
 	@Override
 	public DataPackage transmission(List<Beacon> beacons,DataPackage data) {
-		MLMERequest request = new MLMERequest();
-		MLMEConfirm confirm = null;
+		MCPSRequest request = new MCPSRequest();
+		MCPSConfirm confirm = null;
 		request.setBeacons(beacons);
 		request.setData(data);
-		request.setPrimitive(MLMERequest.PRIMITIVE.TRANSMISSION);
+		request.setPrimitive(MCPSRequest.PRIMITIVE.TRANSMISSION);
 		try {
-			confirm = sendMLMERequest(request);
+			confirm = sendMCPSRequest(request);
 			if(confirm.getStatus()==LayerTcpResponse.STATUS.SUCCESS){
 				return confirm.getData();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			confirm = new MLMEConfirm();
+			confirm = new MCPSConfirm();
 			confirm.setStatus(LayerTcpResponse.STATUS.INVALID_REQUEST);
 		}
 		return null;

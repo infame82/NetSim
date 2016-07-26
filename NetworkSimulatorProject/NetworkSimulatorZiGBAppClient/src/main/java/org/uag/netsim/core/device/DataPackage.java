@@ -13,6 +13,7 @@ public class DataPackage implements Serializable{
 	private int id;
 	private int expiration;
 	private RF_CHANNEL channel;
+	private Beacon beacon;
 	
 	private Object data;
 	public int getId() {
@@ -40,4 +41,12 @@ public class DataPackage implements Serializable{
 	public void setChannel(RF_CHANNEL channel) {
 		this.channel = channel;
 	}
+	public Beacon getBeacon() {
+		return beacon;
+	}
+	public void setBeacon(Beacon beacon) {
+		this.beacon = beacon;
+	}
+	
+	
 }

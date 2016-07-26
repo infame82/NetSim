@@ -4121,3 +4121,39 @@
 2016-06-28 19:13:01 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
 2016-06-28 19:13:01 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
 2016-06-28 19:13:01 INFO  Main:62 - Server stopped succesfully
+2016-07-25 19:18:05 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Mon Jul 25 19:18:05 CDT 2016]; root of context hierarchy
+2016-07-25 19:18:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-07-25 19:18:07 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.admin.ServerLayerNode...
+2016-07-25 19:18:08 INFO  AbstractLayerNode:161 - Listening on 9292
+2016-07-25 19:18:08 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-07-25 19:18:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1ce9ba8a
+2016-07-25 19:18:08 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1ce9ba8a
+2016-07-25 19:18:08 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.phy.PhyLayerNode...
+2016-07-25 19:18:09 INFO  AbstractLayerNode:161 - Listening on 9500
+2016-07-25 19:18:09 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-07-25 19:18:09 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.mac.MacLayerNode...
+2016-07-25 19:18:10 INFO  AbstractLayerNode:161 - Listening on 9100
+2016-07-25 19:18:10 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-07-25 19:18:10 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.network.NetworkLayerNode...
+2016-07-25 19:18:11 INFO  AbstractLayerNode:161 - Listening on 9200
+2016-07-25 19:18:11 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-07-25 19:18:11 INFO  AbstractLayerNode:86 - Initializing class org.uag.netsim.core.layer.app.AppLayerNode...
+2016-07-25 19:18:12 INFO  AbstractLayerNode:161 - Listening on 9300
+2016-07-25 19:18:12 INFO  AbstractLayerNode:169 - Listening class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-07-25 19:18:12 INFO  Main:53 - Server has started succesfully
+2016-07-25 19:18:17 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e774085: startup date [Mon Jul 25 19:18:17 CDT 2016]; root of context hierarchy
+2016-07-25 19:18:17 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [META-INF/spring/spring-ctx.xml]
+2016-07-25 19:18:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1ce9ba8a
+2016-07-25 19:18:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1ce9ba8a
+2016-07-25 19:18:18 INFO  AbstractLayerNode:173 - Message received for org.uag.netsim.admin.ServerLayerNode@1ce9ba8a
+2016-07-25 19:18:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.app.AppLayerNode on 9300
+2016-07-25 19:18:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.app.AppLayerNode
+2016-07-25 19:18:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.network.NetworkLayerNode on 9200
+2016-07-25 19:18:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.network.NetworkLayerNode
+2016-07-25 19:18:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.mac.MacLayerNode on 9100
+2016-07-25 19:18:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.mac.MacLayerNode
+2016-07-25 19:18:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.core.layer.phy.PhyLayerNode on 9500
+2016-07-25 19:18:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.core.layer.phy.PhyLayerNode
+2016-07-25 19:18:18 INFO  AbstractLayerNode:95 - Realising class org.uag.netsim.admin.ServerLayerNode on 9292
+2016-07-25 19:18:18 INFO  AbstractLayerNode:114 - Released class org.uag.netsim.admin.ServerLayerNode
+2016-07-25 19:18:18 INFO  Main:62 - Server stopped succesfully
